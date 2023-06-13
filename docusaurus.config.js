@@ -12,7 +12,7 @@ const config = {
 
   // Set the production url of your site here
   url: 'https://docs.moonsama.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
+  // Set the /<baseUrl>/ pathname under which your site is 
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/category/getting-started',
               },
             ],
           },
@@ -142,7 +142,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2021 Moonsama. Built with Docusaurus.`,
+        copyright: `Copyright © 2023 Moonsama. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
