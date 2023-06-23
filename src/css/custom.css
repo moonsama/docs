@@ -112,6 +112,7 @@
 
 [data-theme='dark'] .footer{
   background: #1A202C;
+  border-top: 1px solid #4A5568;
 }
 
 .footer__link-item{
@@ -124,10 +125,12 @@
 
 [data-theme='dark'] .footer__link-item{
   color: #ffffff;
+  
 }
 
 [data-theme='dark'] .footer__title{
   color: #ffffff;
+  
 }
 
 .footer{
@@ -139,3 +142,23 @@
 
 [data-theme='dark'] .footer__copyright{
   color: #ffffff;}
+
+[data-theme='dark'] .table-of-contents__left-border{
+    border-left: 1px solid #4A5568;
+  }
+
+[data-theme='dark'] .pagination-nav__link{
+  border-left: 1px solid #4A5568;
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-left: 1px solid #0BBB85;
+}
+
+[data-theme='dark'] .card {
+  border-left: 1px solid #4A5568;
+}
+
+[data-theme='dark'] .card:hover {
+  border-left: 1px solid #0BBB85;
+}
