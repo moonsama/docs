@@ -4,7 +4,6 @@ sidebar_position: 1
 
 # Conviction Voting Pallet
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/pallets/conviction-voting/](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/conviction-voting/)
 
 ![img/conviction-voting-banner.png](img/conviction-voting-banner.png)
 

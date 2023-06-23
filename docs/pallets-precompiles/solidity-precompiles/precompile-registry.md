@@ -1,6 +1,5 @@
 # Precompile Registry
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/registry/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/registry/)
 
 ![img/registry-banner.png](img/registry-banner.png)
 

@@ -5,7 +5,6 @@ sidebar_position: 1
 
 # Solidity Precompiles
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/overview/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/overview/)
 
 ![img/overview-banner.png](img/overview-banner.png)
 

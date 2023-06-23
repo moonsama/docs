@@ -1,6 +1,5 @@
 # Ethereum MainNet Precompiles
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/eth-mainnet/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/eth-mainnet/)
 
 ![img/eth-mainnet-banner.png](img/eth-mainnet-banner.png)
 

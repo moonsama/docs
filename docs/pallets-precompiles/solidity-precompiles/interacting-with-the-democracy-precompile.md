@@ -1,6 +1,5 @@
 # Interacting with the Democracy Precompile
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/democracy/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/democracy/)
 
 ![img/democracy-banner.png](img/democracy-banner.png)
 

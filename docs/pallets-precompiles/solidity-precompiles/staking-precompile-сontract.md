@@ -1,6 +1,5 @@
 # Staking Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/staking/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/staking/)
 
 ![img/staking-banner.png](img/staking-banner.png)
 

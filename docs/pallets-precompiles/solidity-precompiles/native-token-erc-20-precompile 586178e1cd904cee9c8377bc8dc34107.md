@@ -1,6 +1,5 @@
 # Native Token ERC-20 Precompile
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/)
 
 ![img/erc20-banner.png](img/erc20-banner.png)
 

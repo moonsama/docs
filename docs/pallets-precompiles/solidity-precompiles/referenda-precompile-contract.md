@@ -1,6 +1,5 @@
 # Referenda Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/referenda/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/referenda/)
 
 ![img/referenda-banner.png](img/referenda-banner.png)
 

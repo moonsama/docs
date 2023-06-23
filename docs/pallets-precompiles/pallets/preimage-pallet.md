@@ -1,6 +1,5 @@
 # Preimage Pallet
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/)
 
 ![img/preimage-banner.png](img/preimage-banner.png)
 

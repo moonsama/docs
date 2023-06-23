@@ -1,6 +1,5 @@
 # Randomness Precompile
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/randomness/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/randomness/)
 
 ![img/randomness-banner.png](img/randomness-banner.png)
 

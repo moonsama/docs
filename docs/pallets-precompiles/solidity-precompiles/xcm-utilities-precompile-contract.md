@@ -1,6 +1,5 @@
 # XCM Utilities Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/xcm-utils/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/xcm-utils/)
 
 ![img/xcm-utils-banner.png](img/xcm-utils-banner.png)
 

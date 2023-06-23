@@ -1,6 +1,5 @@
 # Referenda Pallet
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/pallets/referenda/](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/referenda/)
 
 ![img/referenda-banner.png](img/referenda-banner.png)
 

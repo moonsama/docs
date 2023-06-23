@@ -1,7 +1,5 @@
 # Remote Execution Through XCM
 
-[https://docs.moonbeam.network/builders/interoperability/xcm/xcm-transactor/#xcm-transactor-pallet-interface](https://docs.moonbeam.network/builders/interoperability/xcm/xcm-transactor/#xcm-transactor-pallet-interface)
-
 ![img/xcmtransactor-banner.png](img/xcmtransactor-banner.png)
 
 - 
