@@ -1,6 +1,5 @@
 # GMP Precompile
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/gmp/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/gmp/)
 
 ![img/gmp-banner.png](img/gmp-banner.png)
 

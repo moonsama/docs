@@ -5,7 +5,6 @@ sidebar_position: 4
 
 # Call Permit Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/call-permit/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/call-permit/)
 
 ![img/call-permit-banner.png](img/call-permit-banner.png)
 

@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Moonsama',
   tagline: 'Moonsama docs page',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://docs.moonsama.com',
@@ -64,9 +64,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Moonsama Docs',
+        title: '',
         logo: {
           alt: 'Moonsama Site Logo',
           src: 'img/logo.svg',
@@ -78,7 +77,21 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Updates', position: 'left'},
+          {
+            to: '/docs/category/build',
+            label: 'Start Building',
+            position: 'left',
+          },
+          {
+            to: 'https://medium.com/@MoonsamaNFT',
+            label: 'Medium',
+            position: 'left',
+          },
+          {
+            to: 'https://twitter.com/MoonsamaNFT',
+            label: 'Twitter',
+            position: 'left',
+          },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -111,20 +124,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
+                to: 'https://twitter.com/MoonsamaNFT',
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-              {
-                label: 'Github',
-                href: 'https://github.com/docusaurus',
               },
             ],
           },
@@ -132,12 +133,16 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                href: 'https://medium.com/@MoonsamaNFT',
+                label: 'Medium',
               },
               {
+                href: 'https://moonsama.com',
+                label: 'Moonsama',
+              },
+              {
+                href: 'https://github.com/moonsama',
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },

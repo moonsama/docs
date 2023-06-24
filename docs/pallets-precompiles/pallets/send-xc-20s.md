@@ -1,7 +1,5 @@
 # Send XC-20s to Other Chains
 
-[https://docs.moonbeam.network/builders/interoperability/xcm/xc20/xtokens/#x-tokens-pallet-interface](https://docs.moonbeam.network/builders/interoperability/xcm/xc20/xtokens/#x-tokens-pallet-interface)
-
 ![img/xtokens-banner.png](img/xtokens-banner.png)
 
 - 

@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Configure MetaMask
+# How to verify a Solidity smart contract on Blockscout
 
 Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 

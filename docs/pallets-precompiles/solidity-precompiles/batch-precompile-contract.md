@@ -5,7 +5,6 @@ sidebar_position: 3
 
 # Batch Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/batch/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/batch/)
 
 ![img/batch-banner.png](img/batch-banner.png)
 

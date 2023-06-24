@@ -4,7 +4,6 @@ sidebar_position: 2
 
 # Parachain Staking Pallet
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/)
 
 ![img/staking-banner.png](img/staking-banner.png)
 

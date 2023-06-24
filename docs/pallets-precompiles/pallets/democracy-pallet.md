@@ -5,8 +5,6 @@ sidebar_position: 3
 
 # Democracy Pallet
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/pallets/democracy/](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/democracy/)
-
 ![img/democracy-banner.png](img/democracy-banner.png)
 
 ## Introduction

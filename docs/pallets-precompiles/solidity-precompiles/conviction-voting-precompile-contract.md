@@ -5,7 +5,6 @@ sidebar_position: 5
 
 # Conviction Voting Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/conviction-voting/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/conviction-voting/)
 
 ![img/conviction-voting-banner.png](img/conviction-voting-banner.png)
 

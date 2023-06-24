@@ -1,6 +1,5 @@
 # Send XC-20s to Other Chains
 
-[https://docs.moonbeam.network/builders/interoperability/xcm/xc20/xtokens/#xtokens-precompile](https://docs.moonbeam.network/builders/interoperability/xcm/xc20/xtokens/#xtokens-precompile)
 
 ![img/xtokens-banner.png](img/xtokens-banner.png)
 

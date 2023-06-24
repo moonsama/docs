@@ -5,7 +5,6 @@ sidebar_position: 2
 
 # Author Mapping Precompile
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/author-mapping/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/author-mapping/)
 
 ![img/author-mapping-banner.png](img/author-mapping-banner.png)
 

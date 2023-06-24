@@ -1,6 +1,5 @@
 # Preimage Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/preimage/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/preimage/)
 
 ![img/preimage-banner.png](img/preimage-banner.png)
 

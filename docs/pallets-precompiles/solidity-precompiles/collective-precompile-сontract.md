@@ -5,7 +5,6 @@ sidebar_position: 5
 
 # Collective Precompile Contract
 
-[https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/collective/](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/collective/)
 
 ![img/collective-banner.png](img/collective-banner.png)
 

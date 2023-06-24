@@ -1,6 +1,5 @@
 # Remote Execution Through XCM
 
-[https://docs.moonbeam.network/builders/interoperability/xcm/xcm-transactor/#xcmtransactor-precompile](https://docs.moonbeam.network/builders/interoperability/xcm/xcm-transactor/#xcmtransactor-precompile)
 
 ![img/xcmtransactor-banner.png](img/xcmtransactor-banner.png)
 
