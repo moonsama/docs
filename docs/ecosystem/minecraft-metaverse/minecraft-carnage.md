@@ -58,7 +58,7 @@ You can find more details about Minecraft rewards here:
 
 As explained above, the purpose of the Carnage event is to finish the game with as many resources as possible in your inventory.
 
-Some time after each Carnage event, each player’s loot becomes available on the [Moonsama’s Multiverse Portal](https://multiverse.moonsama.com). The Minecraft resources are then bridged to Moonriver’s Network as ERC-20 / ERC-1155. This is the same Portal that is used to import and export Moonsama NFTs, VIP Tickets, Embassy passes and offhands. 
+Some time after each Carnage event, each player’s loot becomes available on the [Moonsama’s Multiverse Portal](https://multiverse.moonsama.com). The Minecraft resources are then bridged to Moonsama Network’s Network as ERC-20 / ERC-1155. This is the same Portal that is used to import and export Moonsama NFTs, VIP Tickets, Embassy passes and offhands. 
 
 On the [Moonsama Marketplace](https://marketplace.moonsama.com/collections) the resources collection is called ‘Multiverse Asset Factory’, the resources provide utility, are transferable and tradable:
 
@@ -70,7 +70,7 @@ For more details regarding the [Moonsama Marketplace](https://marketplace.moonsa
 
 ### **Multiverse Asset Factory**
 
-The Multiverse Asset Factory collection contains the resources that can, could or will be able to be obtained in the Carnage event which can be bridged on-chain to your Moonriver address:
+The Multiverse Asset Factory collection contains the resources that can, could or will be able to be obtained in the Carnage event which can be bridged on-chain to your Moonsama Network address:
 
 - aStone - Cobblestone
 - aWood - Wood (Logs, directly from trees)

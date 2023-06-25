@@ -5,15 +5,14 @@ sidebar_position: 3
 
 # Democracy Pallet
 
-![img/democracy-banner.png](img/democracy-banner.png)
 
 ## Introduction
 
-As a Polkadot parachain, Moonbeam features native on-chain governance thanks to the [Substrate democracy pallet](https://docs.rs/pallet-democracy/latest/pallet_democracy/). To learn more about governance, such as an overview of related terminology, principles, mechanics, and more, please refer to the [Governance on Moonbeam](https://docs.moonbeam.network/learn/features/governance) page.
+As a Polkadot parachain, Moonsama Network features native on-chain governance thanks to the [Substrate democracy pallet](https://docs.rs/pallet-democracy/latest/pallet_democracy/). To learn more about governance, such as an overview of related terminology, principles, mechanics, and more, please refer to the [Governance on Moonsama Network](learn/features/governance) page.
 
-Some of the functionality of the democracy pallet is also available through a democracy precompile. The precompile is a Solidity interface that enables you to perform governance functions using the Ethereum API. Please refer to the [Democracy Precompile](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/democracy) guide for more information.
+Some of the functionality of the democracy pallet is also available through a democracy precompile. The precompile is a Solidity interface that enables you to perform governance functions using the Ethereum API. Please refer to the [Democracy Precompile](builders/pallets-precompiles/precompiles/democracy) guide for more information.
 
-This guide will provide an overview of the extrinsics, storage methods, and getters for the pallet constants available in the democracy pallet on Moonbeam.
+This guide will provide an overview of the extrinsics, storage methods, and getters for the pallet constants available in the democracy pallet on Moonsama Network.
 
 ## Democracy Pallet Interface
 
@@ -24,7 +23,7 @@ The democracy pallet provides the following extrinsics (functions):
 - **delegate**(to, conviction, balance) - delegates the voting power, with some given Conviction, of the sending account to a given account. The balance delegated is locked for as long as it's delegated, and thereafter for the time appropriate for the Conviction's Lock Period. The sending account must be delegating already or have no voting activity. Emits a `Delegated` event
 - **enactProposal**(proposalHash, index) - *deprecated as of runtime 2000* - enacts a proposal from a referendum given the proposal hash and the index of the referendum
 - **noteImminentPreimage**(encodedProposal) - *deprecated as of runtime 2000* - registers a preimage for an upcoming proposal in the dispatch queue given the encoded preimage of a proposal. Emits a `PreimageNoted` event
-- **notePreimage**(encodedProposal) - *deprecated as of runtime 2000* - registers a preimage for an upcoming proposal given the encoded preimage of a proposal. This odesn't require the proposal to be in the dispatch queue but does require a deposit that is returned once enacted. Emits a `PreimageNoted` event. **This extrinsic is now accessible through the [preimage pallet](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/#extrinsics)**
+- **notePreimage**(encodedProposal) - *deprecated as of runtime 2000* - registers a preimage for an upcoming proposal given the encoded preimage of a proposal. This odesn't require the proposal to be in the dispatch queue but does require a deposit that is returned once enacted. Emits a `PreimageNoted` event. **This extrinsic is now accessible through the [preimage pallet](builders/pallets-precompiles/pallets/preimage/#extrinsics)**
 - 
     
     **propose**(proposal, value) - submits a proposal given the proposal and the deposit amount, which must be at least the minimum deposit. Emits a `Proposed` event. The proposal can be one of three types:
@@ -73,7 +72,7 @@ The democracy pallet includes the following read-only storage methods to obtain 
 - **lowestUnbaked**() - returns the lowest referendum index that corresponds to an unbaked referendum
 - **nextExternal**() - returns the next referendum to be brought to a vote for whenever it would be valid to vote on an external proposal
 - **palletVersion**() - returns the current pallet version
-- **preimages**(H256) - *deprecated as of runtime 2000* - **this storage item is now accessible through the [preimage pallet](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/#storage-methods)**
+- **preimages**(H256) - *deprecated as of runtime 2000* - **this storage item is now accessible through the [preimage pallet](builders/pallets-precompiles/pallets/preimage/#storage-methods)**
 - **publicPropCount**() - returns the number of public proposals that have been made so far
 - **publicProps**() - returns a record of the public proposals
 - **referendumCount**() - returns the number of referenda started so far

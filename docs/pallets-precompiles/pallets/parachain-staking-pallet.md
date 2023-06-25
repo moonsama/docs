@@ -4,16 +4,13 @@ sidebar_position: 2
 
 # Parachain Staking Pallet
 
-
-![img/staking-banner.png](img/staking-banner.png)
-
 ## Introduction
 
-Moonbeam uses a Delegated Proof of Stake (DPoS) system that determines which collators are eligible to produce blocks based on their total stake in the network. For general information on staking, such as general terminology, staking variables, and more, please refer to the [Staking on Moonbeam](https://docs.moonbeam.network/learn/features/staking) page.
+Moonsama Network uses a Delegated Proof of Stake (DPoS) system that determines which collators are eligible to produce blocks based on their total stake in the network. For general information on staking, such as general terminology, staking variables, and more, please refer to the [Staking on Moonsama Network](learn/features/staking) page.
 
-The DPoS system is powered by the [parachain staking](https://github.com/PureStake/moonbeam/tree/master/pallets/parachain-staking/src) pallet, allowing token holders (delegators) to express exactly which collator candidates they would like to support and with what quantity of stake. The design of the parachain staking pallet is such that it enforces shared risk/reward on chain between delegators and candidates.
+The DPoS system is powered by the [parachain staking](/tree/master/pallets/parachain-staking/src) pallet, allowing token holders (delegators) to express exactly which collator candidates they would like to support and with what quantity of stake. The design of the parachain staking pallet is such that it enforces shared risk/reward on chain between delegators and candidates.
 
-Some of the functionality of the parachain staking pallet is also available through a staking precompile. The precompile is a Solidity interface that enables you to perform staking actions through the Ethereum API. Please refer to the [Staking Precompile](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/staking) guide for more information.
+Some of the functionality of the parachain staking pallet is also available through a staking precompile. The precompile is a Solidity interface that enables you to perform staking actions through the Ethereum API. Please refer to the [Staking Precompile](builders/pallets-precompiles/precompiles/staking) guide for more information.
 
 This guide will provide an overview of the extrinsics, storage methods, and getters for the pallet constants available in the parachain staking pallet.
 
@@ -21,7 +18,7 @@ This guide will provide an overview of the extrinsics, storage methods, and gett
 
 Some of the staking pallet extrinsics include exit delays that you must wait before the request can be executed. The exit delays to note are as follows:
 
-MoonbeamMoonriverMoonbase Alpha
+Moonsama Network
 
 | Variable | Value |
 | --- | --- |
@@ -40,7 +37,7 @@ The parachain staking pallet provides the following extrinsics (functions):
 - **cancelCandidateBondLess**() - cancels a pending scheduled request to decrease a candidate's self bond amount
 - **cancelDelegationRequest**(candidate) - cancels any pending delegation requests provided the address of a candidate
 - **cancelLeaveCandidates**(candidateCount) - cancels a candidate's pending scheduled request to leave the candidate pool given the current number of candidates in the pool
-- **cancelLeaveDelegators**() - *deprecated as of runtime 1800* - cancels a pending scheduled request to leave the set of delegators. Use the [batch utility](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `cancelDelegationRequest` for all delegations instead
+- **cancelLeaveDelegators**() - *deprecated as of runtime 1800* - cancels a pending scheduled request to leave the set of delegators. Use the [batch utility](builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `cancelDelegationRequest` for all delegations instead
 - **candidateBondMore**(more) - request to increase a candidate's self bond by a specified amount
 - **delegate**(candidate, amount, candidateDelegationCount, delegationCount) - request to add a delegation to a specific candidate for a given amount and sets the percentage of rewards to auto-compound automatically to `0`. If the caller is not a delegator, this function adds them to the set of delegators. If the caller is already a delegator, then it adjusts their delegation amount
 - **delegateWithAutoCompound**(candidate, amount, autoCompound, candidateDelegationCount, candidateAutoCompoundingDelegationCount, delegationCount) - delegates a collator candidate and sets the percentage of rewards to auto-compound given an integer (no decimals) for the `amount` between 0-100. If the caller is not a delegator, this function adds them to the set of delegators. If the caller is already a delegator, then it adjusts their delegation amount
@@ -48,15 +45,15 @@ The parachain staking pallet provides the following extrinsics (functions):
 - **executeCandidateBondLess**(candidate) - executes any scheduled due requests to decrease a candidate's self bond amount
 - **executeDelegationRequest**(delegator, candidate) - executes any scheduled due delegation requests for a specific delegator provided the address of the candidate
 - **executeLeaveCandidates**(candidate, candidateDelegationCount) - executes any scheduled due requests to leave the set of collator candidates
-- **executeLeaveDelegators**(delegator, delegationCount) - *deprecated as of runtime 1800* - executes a scheduled due request to leave the set of delegators and revoke all delegations. Use the [batch utility](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `executeDelegationRequest` for all delegations instead
+- **executeLeaveDelegators**(delegator, delegationCount) - *deprecated as of runtime 1800* - executes a scheduled due request to leave the set of delegators and revoke all delegations. Use the [batch utility](builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `executeDelegationRequest` for all delegations instead
 - **goOffline**() - allows a collator candidate to temporarily leave the pool of candidates without unbonding
 - **goOnline**() - allows a collator candidate to rejoin the pool of candidates after previously calling `goOffline()`
 - **joinCandidates**(bond, candidateCount) - request to join the set of collator candidates with a specified bond amount and provided the current candidate count
-- **scheduleCandidateBondLess**(less) - schedules a request to decrease a candidate's self bond by a specified amount. There is an [exit delay](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeCandidateBondLess` extrinsic
-- **scheduleDelegatorBondLess**(candidate, less) - schedules a request for a delegator to bond less with respect to a specific candidate. There is an [exit delay](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeDelegationRequest` extrinsic
-- **scheduleLeaveCandidates**(candidateCount) - schedules a request for a candidate to remove themselves from the candidate pool. There is an [exit delay](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeLeaveCandidates` extrinsic
-- **scheduleLeaveDelegators**() - *deprecated as of runtime 1800* - schedules a request to leave the set of delegators and revoke all ongoing delegations. Use the [batch utility](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `scheduleRevokeDelegation` for all delegations instead
-- **scheduleRevokeDelegation**(collator) - schedules a request to revoke a delegation given the address of a candidate. There is an [exit delay](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeDelegationRequest` extrinsic
+- **scheduleCandidateBondLess**(less) - schedules a request to decrease a candidate's self bond by a specified amount. There is an [exit delay](builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeCandidateBondLess` extrinsic
+- **scheduleDelegatorBondLess**(candidate, less) - schedules a request for a delegator to bond less with respect to a specific candidate. There is an [exit delay](builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeDelegationRequest` extrinsic
+- **scheduleLeaveCandidates**(candidateCount) - schedules a request for a candidate to remove themselves from the candidate pool. There is an [exit delay](builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeLeaveCandidates` extrinsic
+- **scheduleLeaveDelegators**() - *deprecated as of runtime 1800* - schedules a request to leave the set of delegators and revoke all ongoing delegations. Use the [batch utility](builders/pallets-precompiles/pallets/utility/#using-the-batch-extrinsics) with `scheduleRevokeDelegation` for all delegations instead
+- **scheduleRevokeDelegation**(collator) - schedules a request to revoke a delegation given the address of a candidate. There is an [exit delay](builders/pallets-precompiles/pallets/staking/#exit-delays) that must be waited before you can execute the request via the `executeDelegationRequest` extrinsic
 - **setAutoCompound**(candidate, value, candidateAutoCompoundingDelegationCountHint, delegationCountHint) - sets the percentage of rewards to be auto-compounded for an existing delegation given an integer (no decimals) for the `value` between 0-100
 - **setBlocksPerRound**(new) - sets the blocks per round. If the `new` value is less than the length of the current round, the next block will transition immediately
 - **setCollatorCommission**(new) - sets the commission to a `new` value for all collators

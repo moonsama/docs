@@ -1,19 +1,17 @@
 # Preimage Precompile Contract
 
 
-![img/preimage-banner.png](img/preimage-banner.png)
-
 ## Introduction
 
-As a Polkadot parachain and decentralized network, Moonbeam features native on-chain governance that enables stakeholders to participate in the direction of the network. With the introduction of OpenGov, also referred to as Governance v2, the Preimage Pallet allows token holders to take the first step towards creating a proposal by submitting the preimage, which is the action to be carried out in the proposal, on-chain. The hash of the preimage is required to submit the proposal. To learn more about Moonbeam's governance system, such as an overview of related terminology, the roadmap of a proposal, and more, please refer to the [Governance on Moonbeam](https://docs.moonbeam.network/learn/features/governance) page.
+As a Polkadot parachain and decentralized network, Moonsama Network features native on-chain governance that enables stakeholders to participate in the direction of the network. With the introduction of OpenGov, also referred to as Governance v2, the Preimage Pallet allows token holders to take the first step towards creating a proposal by submitting the preimage, which is the action to be carried out in the proposal, on-chain. The hash of the preimage is required to submit the proposal. To learn more about Moonsama Network's governance system, such as an overview of related terminology, the roadmap of a proposal, and more, please refer to the [Governance on Moonsama Network](learn/features/governance) page.
 
-The Preimage Precompile interacts directly with Substrate's Preimage Pallet. This pallet is coded in Rust and is normally not accessible from the Ethereum side of Moonbeam. However, the Preimage Precompile allows you to access functions needed to create and manage preimages, all of which are part of the Substrate Preimage Pallet, directly from a Solidity interface.
+The Preimage Precompile interacts directly with Substrate's Preimage Pallet. This pallet is coded in Rust and is normally not accessible from the Ethereum side of Moonsama Network. However, the Preimage Precompile allows you to access functions needed to create and manage preimages, all of which are part of the Substrate Preimage Pallet, directly from a Solidity interface.
 
-The Preimage Precompile is currently available in OpenGov, which is available on Moonriver and Moonbase Alpha only. If you're looking for similar functionality for Moonbeam, which is still on Governance v1, you can refer to the [Democracy Precompile](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/democracy) documentation.
+The Preimage Precompile is currently available in OpenGov, which is available on Moonsama Network and  only. If you're looking for similar functionality for Moonsama Network, which is still on Governance v1, you can refer to the [Democracy Precompile](builders/pallets-precompiles/precompiles/democracy) documentation.
 
 The Preimage Precompile is located at the following address:
 
-MoonriverMoonbase Alpha
+Moonsama Network
 
 ```
 0x0000000000000000000000000000000000000813
@@ -22,14 +20,14 @@ MoonriverMoonbase Alpha
 
 Note
 
-There can be some unintended consequences when using the precompiled contracts on Moonbeam. Please refer to the [Security Considerations](https://docs.moonbeam.network/builders/get-started/eth-compare/security) page for more information.
+There can be some unintended consequences when using the precompiled contracts on Moonsama Network. Please refer to the [Security Considerations](builders/get-started/eth-compare/security) page for more information.
 
 ## The Preimage Solidity Interface
 
-`[Preimage.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/preimage/Preimage.sol)` is a Solidity interface that allows developers to interact with the precompile's two methods:
+`[Preimage.sol](/blob/master/precompiles/preimage/Preimage.sol)` is a Solidity interface that allows developers to interact with the precompile's two methods:
 
-- **notePreimage**(*bytes memory* encodedPropsal) — registers a preimage on-chain for an upcoming proposal given the encoded proposal and returns the preimage hash. This doesn't require the proposal to be in the dispatch queue but does require a deposit which is returned once enacted. Uses the `[notePreimage](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/#:~:text=notePreimage(encodedProposal))` method of the preimage pallet
-- **unnotePreimage**(*bytes32* hash) - clears an unrequested preimage from storage given the hash of the preimage to be removed. Uses the `[unnotePreimage](https://docs.moonbeam.network/builders/pallets-precompiles/pallets/preimage/#:~:text=notePreimage(hash))` method of the preimage pallet
+- **notePreimage**(*bytes memory* encodedPropsal) — registers a preimage on-chain for an upcoming proposal given the encoded proposal and returns the preimage hash. This doesn't require the proposal to be in the dispatch queue but does require a deposit which is returned once enacted. Uses the `[notePreimage](builders/pallets-precompiles/pallets/preimage/#:~:text=notePreimage(encodedProposal))` method of the preimage pallet
+- **unnotePreimage**(*bytes32* hash) - clears an unrequested preimage from storage given the hash of the preimage to be removed. Uses the `[unnotePreimage](builders/pallets-precompiles/pallets/preimage/#:~:text=notePreimage(hash))` method of the preimage pallet
 
 The interface also includes the following events:
 
@@ -40,15 +38,15 @@ The interface also includes the following events:
 
 ### Checking Prerequisites
 
-The below example is demonstrated on Moonbase Alpha, however, similar steps can be taken for Moonriver. To follow the steps in this guide, you'll need to have the following:
+The below example is demonstrated on , however, similar steps can be taken for Moonsama Network. To follow the steps in this guide, you'll need to have the following:
 
-- MetaMask installed and [connected to Moonbase Alpha](https://docs.moonbeam.network/tokens/connect/metamask/)
-- An account with some DEV tokens. You can get DEV tokens for testing on Moonbase Alpha once every 24 hours from the [Moonbase Alpha Faucet](https://faucet.moonbeam.network/)
+- MetaMask installed and [connected to ](tokens/connect/metamask/)
+- An account with some DEV tokens. You can get DEV tokens for testing on  once every 24 hours from the [ Faucet](https://faucet.Moonsama Network.network/)
 
 ### Remix Set Up
 
 1. Click on the **File explorer** tab
-2. Paste a copy of `[Preimage.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/preimage/Preimage.sol)` into a [Remix file](https://remix.ethereum.org/) named `Preimage.sol`
+2. Paste a copy of `[Preimage.sol](/blob/master/precompiles/preimage/Preimage.sol)` into a [Remix file](https://remix.ethereum.org/) named `Preimage.sol`
 
 ![img/preimage-1.png](img/preimage-1.png)
 
@@ -64,7 +62,7 @@ The below example is demonstrated on Moonbase Alpha, however, similar steps can 
 1. Click on the **Deploy and Run** tab, directly below the **Compile** tab in Remix. Note: you are not deploying a contract here, instead you are accessing a precompiled contract that is already deployed
 2. Make sure **Injected Provider - Metamask** is selected in the **ENVIRONMENT** drop down
 3. Ensure **Preimage.sol** is selected in the **CONTRACT** dropdown. Since this is a precompiled contract there is no need to deploy, instead you are going to provide the address of the precompile in the **At Address** field
-4. Provide the address of the Preimage Precompile for Moonbase Alpha: `0x0000000000000000000000000000000000000813` and click **At Address**
+4. Provide the address of the Preimage Precompile for : `0x0000000000000000000000000000000000000813` and click **At Address**
 5. The Preimage Precompile will appear in the list of **Deployed Contracts**
 
 ![img/preimage-3.png](img/preimage-3.png)
@@ -73,9 +71,9 @@ The below example is demonstrated on Moonbase Alpha, however, similar steps can 
 
 In order to submit a proposal, you'll first need to submit a preimage of that proposal, which essentially defines the proposed action on-chain. You can submit the preimage using the `notePreimage` function of the Preimage Precompile. The `notePreimage` function accepts the encoded proposal, so the first step you'll need to take is to get the encoded proposal, which can easily be done using Polkadot.js Apps.
 
-In this section, you'll get the preimage hash and the encoded proposal data for a proposal. To get the preimage hash, you'll first need to navigate to the **Preimage** page of [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.moonbeam.network%2Fpublic-ws#):
+In this section, you'll get the preimage hash and the encoded proposal data for a proposal. To get the preimage hash, you'll first need to navigate to the **Preimage** page of [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.Moonsama Network.network%2Fpublic-ws#):
 
-1. Navigate to the **[Governance** tab](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.moonbeam.network%2Fpublic-ws#/democracy)
+1. Navigate to the **[Governance** tab](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.Moonsama Network.network%2Fpublic-ws#/democracy)
 2. Select **Preimages** from the dropdown
 3. From the **Preimages** page, click on **+ Add preimage**
 
@@ -101,7 +99,7 @@ Note
 
 You should NOT sign and submit the transaction here. You will submit this information via the `notePreimage` function in the next step.
 
-Now you can take the **bytes** of the encoded proposal that you got from [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.moonbeam.network%2Fpublic-ws#/democracy) and submit it via the `notePreimage` function of the Preimage Precompile. To submit the preimage via the `notePreimage` function, take the following steps:
+Now you can take the **bytes** of the encoded proposal that you got from [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss://wss.api.moonbase.Moonsama Network.network%2Fpublic-ws#/democracy) and submit it via the `notePreimage` function of the Preimage Precompile. To submit the preimage via the `notePreimage` function, take the following steps:
 
 1. Expand the Preimage Precompile contract to see the available functions
 2. Find the **notePreimage** function and press the button to expand the section
@@ -110,6 +108,6 @@ Now you can take the **bytes** of the encoded proposal that you got from [Polkad
 
 ![img/preimage-4.png](img/preimage-4.png)
 
-Now that you've submitted the preimage for your proposal your proposal can be submitted! Head over to the [Referenda Precompile documentation](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/referenda) to learn how to submit your proposal.
+Now that you've submitted the preimage for your proposal your proposal can be submitted! Head over to the [Referenda Precompile documentation](builders/pallets-precompiles/precompiles/referenda) to learn how to submit your proposal.
 
 If you wish to remove a preimage, you can follow the same steps noted above except use the `unnotePreimage` function and pass in the preimage hash instead of the encoded proposal.
