@@ -1,21 +1,18 @@
 # Native Token ERC-20 Precompile
 
-
-![img/erc20-banner.png](img/erc20-banner.png)
-
 ## Introduction
 
-The native token ERC-20 precompiled contract on Moonbeam allows developers to interact with the native protocol token through an ERC-20 interface. Although GLMR and MOVR are not ERC-20 tokens, now you can interact with them as if they were native ERC-20s!
+The native token ERC-20 precompiled contract on Moonsama Network allows developers to interact with the native protocol token through an ERC-20 interface. Although GLMR and MOVR are not ERC-20 tokens, now you can interact with them as if they were native ERC-20s!
 
 One of the main benefits of this precompile is that it removes the necessity of having a wrapped representation of the protocol token as an ERC-20 smart contract, such as WETH on Ethereum. Furthermore, it prevents having multiple wrapped representations of the same protocol token. Consequently, DApps that need to interact with the protocol token via an ERC-20 interface can do so without needing a separate smart contract.
 
-Under the hood, the [ERC-20 precompile](https://github.com/PureStake/moonbeam/blob/master/precompiles/balances-erc20/src/lib.rs) executes specific Substrate actions related to the Substrate balances pallet, which is coded in Rust. The balances pallet provides functionality for handling the [various types of balances on Moonbeam](https://docs.moonbeam.network/builders/get-started/eth-compare/balances/#moonbeam-account-balances), setting the free balance, transferring balances, and more.
+Under the hood, the [ERC-20 precompile](/blob/master/precompiles/balances-erc20/src/lib.rs) executes specific Substrate actions related to the Substrate balances pallet, which is coded in Rust. The balances pallet provides functionality for handling the [various types of balances on Moonsama Network](builders/get-started/eth-compare/balances/#Moonsama Network-account-balances), setting the free balance, transferring balances, and more.
 
-This guide will show you how to interact with DEV tokens, the native protocol tokens for the Moonbase Alpha TestNet, via the ERC-20 precompile. You can also follow and adapt this guide to learn how to use GLMR or MOVR as an ERC-20 token.
+This guide will show you how to interact with DEV tokens, the native protocol tokens for the  TestNet, via the ERC-20 precompile. You can also follow and adapt this guide to learn how to use GLMR or MOVR as an ERC-20 token.
 
 The precompile is located at the following address:
 
-MoonbeamMoonriverMoonbase Alpha
+Moonsama Network
 
 ```
 0x0000000000000000000000000000000000000802
@@ -24,11 +21,11 @@ MoonbeamMoonriverMoonbase Alpha
 
 Note
 
-There can be some unintended consequences when using the precompiled contracts on Moonbeam. Please refer to the [Security Considerations](https://docs.moonbeam.network/builders/get-started/eth-compare/security) page for more information.
+There can be some unintended consequences when using the precompiled contracts on Moonsama Network. Please refer to the [Security Considerations](builders/get-started/eth-compare/security) page for more information.
 
 ## The ERC-20 Solidity Interface
 
-The `[ERC20.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/balances-erc20/ERC20.sol)` interface on Moonbeam follows the [EIP-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20) which is the standard API interface for tokens within smart contracts. The standard defines the required functions and events that a token contract must implement to be interoperable with different applications.
+The `[ERC20.sol](/blob/master/precompiles/balances-erc20/ERC20.sol)` interface on Moonsama Network follows the [EIP-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20) which is the standard API interface for tokens within smart contracts. The standard defines the required functions and events that a token contract must implement to be interoperable with different applications.
 
 The interface includes the following functions:
 
@@ -61,15 +58,15 @@ The ERC-20 precompile does not include `deposit` and `withdraw` functions and su
 
 To follow along with this tutorial, you will need to have:
 
-- [MetaMask installed and connected to Moonbase Alpha](https://docs.moonbeam.network/tokens/connect/metamask/)
-- Create or have two accounts on Moonbase Alpha to test out the different features in the ERC-20 precompile
-- At least one of the accounts will need to be funded with `DEV` tokens. You can get DEV tokens for testing on Moonbase Alpha once every 24 hours from the [Moonbase Alpha Faucet](https://faucet.moonbeam.network/)
+- [MetaMask installed and connected to ](tokens/connect/metamask/)
+- Create or have two accounts on  to test out the different features in the ERC-20 precompile
+- At least one of the accounts will need to be funded with `DEV` tokens. You can get DEV tokens for testing on  once every 24 hours from the [ Faucet](https://faucet.Moonsama Network.network/)
 
 ### Add Token to MetaMask
 
-If you want to interact with Moonbase Alpha DEV tokens like you would with an ERC-20 in MetaMask, you can create a custom token using the precompile address.
+If you want to interact with  DEV tokens like you would with an ERC-20 in MetaMask, you can create a custom token using the precompile address.
 
-To get started, open up MetaMask and make sure you are [connected to Moonbase Alpha](https://docs.moonbeam.network/tokens/connect/metamask/) and:
+To get started, open up MetaMask and make sure you are [connected to ](tokens/connect/metamask/) and:
 
 1. Switch to the **Assets** tab
 2. Click on **Import tokens**
@@ -87,13 +84,13 @@ MetaMask will prompt you to import the tokens. You can review the token details 
 
 ![img/erc20-3.png](img/erc20-3.png)
 
-And that's it! You've successfully added the DEV token as a custom ERC-20 token on the Moonbase Alpha TestNet.
+And that's it! You've successfully added the DEV token as a custom ERC-20 token on the  TestNet.
 
 ### Remix Set Up
 
 You can interact with the ERC-20 precompile using [Remix](https://remix.ethereum.org/). To add the precompile to Remix, you will need to:
 
-1. Get a copy of `[ERC20.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/balances-erc20/ERC20.sol)`
+1. Get a copy of `[ERC20.sol](/blob/master/precompiles/balances-erc20/ERC20.sol)`
 2. Paste the file contents into a Remix file named `IERC20.sol`
 
 ### Compile the Contract
@@ -126,10 +123,10 @@ The **IERC20** precompile will appear in the list of **Deployed Contracts**.
 The ERC-20 interface allows you to quickly obtain token information, including the token's total supply, name, symbol, and decimal places. You can get this information by following these steps:
 
 1. Expand the **IERC20** contract under **Deployed Contracts**
-2. Click **decimals** to get the decimal places of the Moonbase Alpha native protocol token
+2. Click **decimals** to get the decimal places of the  native protocol token
 3. Click **name** to get the name of the token
 4. Click **symbol** to get the symbol of the token
-5. Click **totalSupply** to obtain the total supply of tokens in existence on Moonbase Alpha
+5. Click **totalSupply** to obtain the total supply of tokens in existence on 
 
 ![img/erc20-6.png](img/erc20-6.png)
 
@@ -137,7 +134,7 @@ The response for each call will be displayed under the corresponding function.
 
 ### Get Account Balance
 
-You can check the balance of any address on Moonbase Alpha by calling the `balanceOf` function and passing in an address:
+You can check the balance of any address on  by calling the `balanceOf` function and passing in an address:
 
 1. Expand the **balanceOf** function
 2. Enter an address you would like to check the balance of for the **owner**
@@ -164,7 +161,7 @@ After the transaction has successfully gone through, you'll notice that the bala
 
 ### Get Allowance of Spender
 
-To check that the spender received the allowance approved in the [Approve a Spend](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/#approve-a-spend) section, you can:
+To check that the spender received the allowance approved in the [Approve a Spend](builders/pallets-precompiles/precompiles/erc20/#approve-a-spend) section, you can:
 
 1. Expand the **allowance** function
 2. Enter your address for the **owner**
@@ -187,7 +184,7 @@ To do a standard transfer and send tokens from your account directly to another 
 
 ![img/erc20-10.png](img/erc20-10.png)
 
-Once the transaction is complete, you can [check your balance](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/#get-account-balance) using the `balanceOf` function or by looking at MetaMask, and notice that this time your balance decreased by 1 DEV token. You can also use the `balanceOf` function to ensure that the recipients balance has increased by 1 DEV token as expected.
+Once the transaction is complete, you can [check your balance](builders/pallets-precompiles/precompiles/erc20/#get-account-balance) using the `balanceOf` function or by looking at MetaMask, and notice that this time your balance decreased by 1 DEV token. You can also use the `balanceOf` function to ensure that the recipients balance has increased by 1 DEV token as expected.
 
 ### Send Transfer From Specific Account
 
@@ -207,7 +204,7 @@ Next, you can initiate and send the transfer, to do so:
 
 ![img/erc20-12.png](img/erc20-12.png)
 
-Once the transaction is complete, you can [check the balance](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/#get-account-balance) of the owner and spender using the `balanceOf` function. The spender's balance should have increased by 1 DEV token, and their allowance should now be depleted. To verify that the spender no longer has an allowance, you can call the `allowance` function, passing in the owner and spender's addresses. You should receive a result of 0.
+Once the transaction is complete, you can [check the balance](builders/pallets-precompiles/precompiles/erc20/#get-account-balance) of the owner and spender using the `balanceOf` function. The spender's balance should have increased by 1 DEV token, and their allowance should now be depleted. To verify that the spender no longer has an allowance, you can call the `allowance` function, passing in the owner and spender's addresses. You should receive a result of 0.
 
 ![img/erc20-13.png](img/erc20-13.png)
 

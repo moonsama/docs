@@ -6,19 +6,17 @@ sidebar_position: 5
 # Collective Precompile Contract
 
 
-![img/collective-banner.png](img/collective-banner.png)
-
 ## Introduction
 
 The Collective Precompile enables a user to directly interact with [Substrate's collective pallet](https://paritytech.github.io/substrate/master/pallet_collective/index.html) directly from a Solidity interface.
 
-A collective is a group of members that are responsible for specific democracy-related actions such as proposing, voting on, executing, and closing motions. Each can execute different actions with different origins. Consequently, collectives can be created with very specific scopes. For example, Moonriver has four collectives: the Council collective, the Technical Committee collective, the Treasury Council collective, and the OpenGov Technical Committee collective (for whitelisting OpenGov proposals). As such, there is a precompile for each collective. For more information on the Council, Technical Committee, and OpenGov Technical Committee please refer to the [Governance on Moonbeam](https://docs.moonbeam.network/learn/features/governance/) page, and for more information on the Treasury Council, please refer to the [Treasury on Moonbeam](https://docs.moonbeam.network/learn/features/treasury/) page.
+A collective is a group of members that are responsible for specific democracy-related actions such as proposing, voting on, executing, and closing motions. Each can execute different actions with different origins. Consequently, collectives can be created with very specific scopes. For example, Moonsama Network has four collectives: the Council collective, the Technical Committee collective, the Treasury Council collective, and the OpenGov Technical Committee collective (for whitelisting OpenGov proposals). As such, there is a precompile for each collective. For more information on the Council, Technical Committee, and OpenGov Technical Committee please refer to the [Governance on Moonsama Network](learn/features/governance/) page, and for more information on the Treasury Council, please refer to the [Treasury on Moonsama Network](learn/features/treasury/) page.
 
 This guide will show you how to propose, vote on, and close a proposal using the Collective Precompile.
 
 The Collective Precompiles are located at the following addresses:
 
-MoonbeamMoonriverMoonbase Alpha
+Moonsama Network
 
 | Collective | Address |
 | --- | --- |
@@ -28,11 +26,11 @@ MoonbeamMoonriverMoonbase Alpha
 
 Note
 
-There can be some unintended consequences when using the precompiled contracts on Moonbeam. Please refer to the [Security Considerations](https://docs.moonbeam.network/builders/get-started/eth-compare/security) page for more information.
+There can be some unintended consequences when using the precompiled contracts on Moonsama Network. Please refer to the [Security Considerations](builders/get-started/eth-compare/security) page for more information.
 
 ## The Collective Solidity Interface
 
-`[Collective.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/collective/Collective.sol)` is a Solidity interface that allows developers to interact with the precompile's five methods.
+`[Collective.sol](/blob/master/precompiles/collective/Collective.sol)` is a Solidity interface that allows developers to interact with the precompile's five methods.
 
 The interface includes the following functions:
 
@@ -63,26 +61,26 @@ The interface includes the following events:
 
 The example in this section will show you how to submit a Treasury proposal using the Treasury Council Collective Precompile. As such, the proposal will be subject to meeting the voting requirements of the Treasury Council. The threshold for accepting a Treasury proposal is at least three-fifths of the Treasury Council. On the other hand, the threshold for rejecting a proposal is at least one-half of the Treasury Council. Please keep in mind that in order to propose and vote on the proposal, you must be a member of the Treasury Council.
 
-If you are not a member of the Treasury Council on Moonbeam, Moonriver, or Moonbase Alpha, you can test out the features of the Collective Precompile using a [Moonbeam development node](https://docs.moonbeam.network/builders/get-started/networks/moonbeam-dev/). The Moonbeam development node comes with [ten pre-funded accounts](https://docs.moonbeam.network/builders/get-started/networks/moonbeam-dev/#pre-funded-development-accounts), of which Baltathar, Charleth, and Dorothy are automatically set as members of the Treasury Council collective. You can use any of these three accounts to follow along with the rest of the guide.
+If you are not a member of the Treasury Council on Moonsama Network, Moonsama Network, or , you can test out the features of the Collective Precompile using a [Moonsama Network development node](builders/get-started/networks/Moonsama Network-dev/). The Moonsama Network development node comes with [ten pre-funded accounts](builders/get-started/networks/Moonsama Network-dev/#pre-funded-development-accounts), of which Baltathar, Charleth, and Dorothy are automatically set as members of the Treasury Council collective. You can use any of these three accounts to follow along with the rest of the guide.
 
 ### Checking Prerequisites
 
-The example in this guide will be shown on a Moonbeam development node, however, it can be adapted for any of the Moonbeam-based networks.
+The example in this guide will be shown on a Moonsama Network development node, however, it can be adapted for any of the Moonsama Network-based networks.
 
 To get started, you will need to have the following:
 
-- Have MetaMask installed and [connected to one of the Moonbeam-based networks](https://docs.moonbeam.network/tokens/connect/metamask/)
-- Have an account with funds. If using a Moonbeam development node, the development accounts are pre-funded. For Moonbeam, Moonriver, or Moonbase Alpha, you'll need to fund your account. You can get DEV tokens for testing on Moonbase Alpha once every 24 hours from the [Moonbase Alpha Faucet](https://faucet.moonbeam.network/)
+- Have MetaMask installed and [connected to one of the Moonsama Network-based networks](tokens/connect/metamask/)
+- Have an account with funds. If using a Moonsama Network development node, the development accounts are pre-funded. For Moonsama Network, Moonsama Network, or , you'll need to fund your account. You can get DEV tokens for testing on  once every 24 hours from the [ Faucet](https://faucet.Moonsama Network.network/)
 
-If you're using a Moonbeam development node and the development accounts, you'll also need to do the following:
+If you're using a Moonsama Network development node and the development accounts, you'll also need to do the following:
 
 - Set your development node to seal blocks on a time interval such as every 6 seconds (6000 milliseconds) using the `-sealing 6000` flag
-- [Connect Polkadot.js Apps to your local Moonbeam development node](https://docs.moonbeam.network/builders/get-started/networks/moonbeam-dev/#connecting-polkadot-js-apps-to-a-local-moonbeam-node)
-- Import Baltathar's, Charleth's, and/or Dorothy's accounts into [Polkadot.js Apps](https://docs.moonbeam.network/tokens/connect/polkadotjs/#creating-or-importing-an-h160-account) and [MetaMask](https://docs.moonbeam.network/tokens/connect/metamask/#import-accounts)
+- [Connect Polkadot.js Apps to your local Moonsama Network development node](builders/get-started/networks/Moonsama Network-dev/#connecting-polkadot-js-apps-to-a-local-Moonsama Network-node)
+- Import Baltathar's, Charleth's, and/or Dorothy's accounts into [Polkadot.js Apps](tokens/connect/polkadotjs/#creating-or-importing-an-h160-account) and [MetaMask](tokens/connect/metamask/#import-accounts)
 
 ### Remix Set Up
 
-1. Get a copy of `[Collective.sol](https://github.com/PureStake/moonbeam/blob/master/precompiles/collective/Collective.sol)`
+1. Get a copy of `[Collective.sol](/blob/master/precompiles/collective/Collective.sol)`
 2. Copy and paste the file contents into a [Remix file](https://remix.ethereum.org/) named `Collective.sol`
 
 ![img/collective-1.png](img/collective-1.png)
