@@ -4,20 +4,6 @@ sidebar_position: 1
 
 # About SAMA
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+**$SAMA** is a cryptocurrency that serves as the native token of Moonsama Network. It is a vital component of the network's ecosystem, as it is used to facilitate transactions, incentivize users to participate in the network, and maintain the security and stability of the network. 
 
-Docusaurus has **much more to offer**!
-
-Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
-
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
-
-## What's next?
-
-- Read the [official documentation](https://docusaurus.io/)
-- Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
-- Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
-- Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout)
-- Add a [search bar](https://docusaurus.io/docs/search)
-- Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase)
-- Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)
+SAMA token has a variety of use cases, such as being used to pay for goods and services within the Moonsama Network, being exchanged for other cryptocurrencies or fiat currencies, and being staked to earn rewards. 
