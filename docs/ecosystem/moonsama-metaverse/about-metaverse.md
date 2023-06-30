@@ -8,4 +8,4 @@ One of the best things about Moonsama is the seasonal activities and challenges 
 
 So what are you waiting for? Join Moonsama today and experience the future of digital art and blockchain technology.
 
-[![play-button](img/play-button.png)](https://pondsama.com/)
+[![play-button](img/play-button.svg)](https://pondsama.com/)
