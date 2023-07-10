@@ -5,6 +5,15 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/static/Rubik/Rubik-Regular.ttf") format("ttf");
+}
+
+:root {
+  --ifm-font-family-base: "Rubik";
+}
 :root {
   --ifm-color-primary: #0BBB85;
   --ifm-color-primary-dark: #0aa878;

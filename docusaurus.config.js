@@ -78,7 +78,7 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/docs/category/build',
+            to: '/docs/category/start-building',
             label: 'Start Building',
             position: 'left',
           },
@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/category/getting-started',
+                to: '/docs/category/about-moonsama',
               },
             ],
           },

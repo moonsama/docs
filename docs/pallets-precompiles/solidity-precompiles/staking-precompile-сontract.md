@@ -13,7 +13,7 @@ Moonsama Network
 
 ```
 
-This guide will cover the available methods in the staking precompile interface. In addition, it will show you how to interact with the staking pallet through the staking precompile and the Ethereum API. The examples in this guide are done on , but they can be adapted for Moonsama Network or Moonsama Network.
+This guide will cover the available methods in the staking precompile interface. In addition, it will show you how to interact with the staking pallet through the staking precompile and the Ethereum API. The examples in this guide are done on , but they can be adapted for Moonsama Network or Moonriver.
 
 Note
 
@@ -102,7 +102,7 @@ As of runtime 1001, the following methods are **deprecated** and, as of runtime 
 
 ### Checking Prerequisites
 
-The below example is demonstrated on , however, similar steps can be taken for Moonsama Network and Moonsama Network.
+The below example is demonstrated on , however, similar steps can be taken for Moonsama Network and Moonriver.
 
 - Have MetaMask installed and [connected to ](tokens/connect/metamask/)
 - Have an account with at least `1` token. You can get DEV tokens for testing on  once every 24 hours from the [ Faucet](https://faucet.Moonsama Network.network/)
@@ -240,7 +240,7 @@ Once you have the necessary information, you can take the following steps in Rem
 
 ### Revoke a Delegation
 
-As of [runtime version 1001](https://Moonsama Network.network/announcements/staking-changes-Moonsama Network-runtime-upgrade/), there have been significant changes to the way users can interact with various staking features. Including the way staking exits are handled.
+As of [runtime version 1001](https://Moonsama Network.network/announcements/staking-changes-moonriver-runtime-upgrade/), there have been significant changes to the way users can interact with various staking features. Including the way staking exits are handled.
 
 Exits now require you to schedule a request to exit or revoke a delegation, wait a delay period, and then execute the request.
 
