@@ -1,0 +1,11 @@
+name: image-build
+on:
+  workflow_dispatch:
+  pull_request:
+jobs:
+  image-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build container image
+        run: docker build -t docs .
