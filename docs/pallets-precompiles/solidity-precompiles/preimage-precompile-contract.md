@@ -77,8 +77,6 @@ In this section, you'll get the preimage hash and the encoded proposal data for 
 2. Select **Preimages** from the dropdown
 3. From the **Preimages** page, click on **+ Add preimage**
 
-![img/democracy-4.png](img/democracy-4.png)
-
 Then take the following steps:
 
 1. Select an account (any account is fine because you're not submitting any transaction here)
@@ -86,14 +84,10 @@ Then take the following steps:
 3. Enter the text of the remark, ensuring it is unique. Duplicate proposals such as "Hello World!" will not be accepted
 4. Click the **Submit preimage** button but don't sign or confirm the transaction on the next page
 
-![img/democracy-5.png](img/democracy-5.png)
-
 On the next screen, take the following steps:
 
 1. Press the triangle icon to reveal the encoded proposal in bytes
 2. Copy the **bytes** representing the encoded proposal - you'll need this when calling the `notePreimage` function in a later step
-
-![img/democracy-6.png](img/democracy-6.png)
 
 Note
 
