@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: An overview of the platform
 ---
 # What is Moonsama
 ![moonsama](img/moonsama-cover.png)

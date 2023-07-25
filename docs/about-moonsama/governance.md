@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+description: Fostering fair participation and representation
 ---
 
 # Governance
