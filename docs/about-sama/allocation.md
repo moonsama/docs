@@ -4,7 +4,8 @@ sidebar_position: 5
 
 # $SAMA Allocation
 
-SAMA token is the native gas & utility token that underpins the whole ecosystem. The breakdown of the SAMA supply is the following:
+SAMA token is the native gas & utility token that underpins the whole ecosystem. The breakdown of the SAMA supply is 
+the following:
 
 **Total supply**: 1,000,000,000 SAMA
 

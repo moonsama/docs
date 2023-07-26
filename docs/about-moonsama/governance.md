@@ -4,13 +4,14 @@ description: Fostering fair participation and representation
 ---
 
 # Governance
+
 The Moonsama team are working collaboratively with [partners from Jur](https://jur.io/) to introduce a governance model 
 that reflects the unique aspects of its ecosystem and ensures fair and meaningful participation by its members. At the 
 core of this model are principles of decentralization, active engagement, and balanced economic rewards. The model also 
 leverages the unique properties of Non-Fungible Tokens (NFTs) to encourage a greater sense of community and commitment 
 among its members.
 
-### Key Principles and Ideas:
+### Key Principles and Ideas
 
 **NFT-Based Governance:** The foundation of Moonsama's governance model lies in the use of Non-Fungible Tokens (NFTs). 
 These unique digital assets provide holders with a stronger sense of community and engagement than traditional tokens, 

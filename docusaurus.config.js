@@ -78,17 +78,17 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/docs/category/start-building',
+            to: '/docs/category/builder-guides',
             label: 'Start Building',
             position: 'left',
           },
           {
-            to: 'https://medium.com/@MoonsamaNFT',
+            href: 'https://medium.com/@MoonsamaNFT',
             label: 'Medium',
             position: 'left',
           },
           {
-            to: 'https://twitter.com/MoonsamaNFT',
+            href: 'https://twitter.com/MoonsamaNFT',
             label: 'Twitter',
             position: 'left',
           },
@@ -115,16 +115,46 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/category/about-moonsama',
+                label: 'Quick Start',
+                to: '/docs/category/about-moonsama'
+              },
+              {
+                label: 'SAMA Token',
+                to: '/docs/category/what-is-sama'
               },
             ],
+          },
+          {
+            title: 'Learn',
+            items: [
+              {
+                label: 'The Ecosystem',
+                to: '/docs/category/ecosystem'
+              },
+              {
+                label: 'The Technology',
+                to: '/docs/category/technology'
+              }
+            ]
+          },
+          {
+            title: 'Guides',
+            items: [
+              {
+                label: 'For Builders',
+                to: '/docs/category/builder-guides',
+              },
+              {
+                label: 'For Users',
+                to: '/docs/category/user-guides'
+              },
+            ]
           },
           {
             title: 'Community',
             items: [
               {
-                to: 'https://twitter.com/MoonsamaNFT',
+                href: 'https://twitter.com/MoonsamaNFT',
                 label: 'Twitter',
               },
             ],
