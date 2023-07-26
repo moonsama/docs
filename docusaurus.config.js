@@ -57,6 +57,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -186,12 +192,12 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'S7S4T6Q4KC',
+        appId: 'QTJKUSWKT3',
 
         // Public API key: it is safe to commit it
-        apiKey: '4eacb78946fd33fdd34c5954c4658a7b',
+        apiKey: '504953decf97dc1ceeb85e26375a6aa7',
 
-        indexName: 'moonsama',
+        indexName: 'moonsama-docs',
 
         // Optional: see doc section below
         contextualSearch: true,
