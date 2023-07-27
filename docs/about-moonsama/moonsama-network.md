@@ -12,6 +12,8 @@ token-based runtime logic and governance while having access to other networks
 For more information about the live network, see 
 [Moonsama on Polkadot.js.org](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.moonsama.com%2Fws#/explorer).
 
+Moonsama Network is fully EVM compatible. You can find connection and RPC infos [here](https://chainlist.org/?search=2199) and browse EVM transactions in the [EVM explorer of Moonsama Network](https://explorer.moonsama.com).
+
 For a deeper dive into the runtime, [check out the technical documentation](/docs/category/technology/).
 
 ![moonsama-network](img/moonsama-network.png)

@@ -5,7 +5,13 @@ description: Fostering fair participation and representation
 
 # Governance
 
-The Moonsama team are working collaboratively with [partners from Jur](https://jur.io/) to introduce a governance model 
+Current governance model of Moonsama follows a simple token voting system with Moonsama and Exosama NFTs. This means 1 Moonsama NFT = 1 vote, and 1 Exosama NFT = 0.1 vote to reflect the supply of each collection. The general sentiment of the community is determined by the Moonsama Assembly, participants of the Governance channels on Telegram and Discord. Here proposals can be submitted and voted on by simply submitting "thumbs up" or "thumbs down emojis" on them. This is indicative, a measure of sentiment, providing pre-filtering of potential ratifiable proposals.
+
+If a proposal reaches serious interest, it can be enacted as an official proposal of the Townhall. Townhall is an in-metaverse parlaiment, where active proposals can be voted on on voting terminals, each according to their voting-weight determined by NFT holdings. Proposals passed are then ratified and executed by the DAO President and the Moonsama Core team.
+
+Past proposals can be found [here](https://mcapi.moonsama.com/townhall).
+
+The Moonsama team are working collaboratively with [partners from Jur](https://jur.io/) to introduce a novel governance model 
 that reflects the unique aspects of its ecosystem and ensures fair and meaningful participation by its members. At the 
 core of this model are principles of decentralization, active engagement, and balanced economic rewards. The model also 
 leverages the unique properties of Non-Fungible Tokens (NFTs) to encourage a greater sense of community and commitment 

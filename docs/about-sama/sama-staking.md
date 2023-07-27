@@ -9,3 +9,5 @@ sidebar_position: 3
 Working hard to deliver! 🏗️👷‍♂️
 
 [However, check out the staking proposal by our CTO.](https://moonsama.notion.site/moonsama/Kyilkhor-s-staking-proposal-26307b7d957948c783cb7c083962122b)
+
+Stay tuned for updates of the 2nd iteration of this proposal.
