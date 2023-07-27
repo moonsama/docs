@@ -57,6 +57,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -78,17 +84,17 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/docs/category/start-building',
+            to: '/docs/category/builder-guides',
             label: 'Start Building',
             position: 'left',
           },
           {
-            to: 'https://medium.com/@MoonsamaNFT',
+            href: 'https://medium.com/@MoonsamaNFT',
             label: 'Medium',
             position: 'left',
           },
           {
-            to: 'https://twitter.com/MoonsamaNFT',
+            href: 'https://twitter.com/MoonsamaNFT',
             label: 'Twitter',
             position: 'left',
           },
@@ -115,16 +121,46 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/category/about-moonsama',
+                label: 'Quick Start',
+                to: '/docs/category/about-moonsama'
+              },
+              {
+                label: 'SAMA Token',
+                to: '/docs/category/what-is-sama'
               },
             ],
+          },
+          {
+            title: 'Learn',
+            items: [
+              {
+                label: 'The Ecosystem',
+                to: '/docs/category/ecosystem'
+              },
+              {
+                label: 'The Technology',
+                to: '/docs/category/technology'
+              }
+            ]
+          },
+          {
+            title: 'Guides',
+            items: [
+              {
+                label: 'For Builders',
+                to: '/docs/category/builder-guides',
+              },
+              {
+                label: 'For Users',
+                to: '/docs/category/user-guides'
+              },
+            ]
           },
           {
             title: 'Community',
             items: [
               {
-                to: 'https://twitter.com/MoonsamaNFT',
+                href: 'https://twitter.com/MoonsamaNFT',
                 label: 'Twitter',
               },
             ],
@@ -156,12 +192,12 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'S7S4T6Q4KC',
+        appId: 'QTJKUSWKT3',
 
         // Public API key: it is safe to commit it
-        apiKey: '4eacb78946fd33fdd34c5954c4658a7b',
+        apiKey: '504953decf97dc1ceeb85e26375a6aa7',
 
-        indexName: 'moonsama',
+        indexName: 'moonsama-docs',
 
         // Optional: see doc section below
         contextualSearch: true,
