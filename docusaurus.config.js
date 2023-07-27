@@ -45,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/moonsama/docs',
+            'https://github.com/moonsama/docs/blob/main/',
         },
         blog: {
           showReadingTime: true,
@@ -82,11 +82,6 @@ const config = {
             sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
-          },
-          {
-            to: '/docs/category/builder-guides',
-            label: 'Start Building',
-            position: 'left',
           },
           {
             href: 'https://medium.com/@MoonsamaNFT',
