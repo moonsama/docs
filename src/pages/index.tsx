@@ -30,7 +30,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Moonsama is the multi-chain protocol enabling rapid building for NFT applications.
+      Moonsama accelerates the go-to-market of NFT-powered solutions by providing a layer of common, critical building blocks.">
       <HomepageHeader />
       <main>
       </main>
