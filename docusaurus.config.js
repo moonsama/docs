@@ -139,7 +139,7 @@ const config = {
               },
               {
                 label: 'The Technology',
-                to: '/docs/category/technology'
+                to: '/docs/category/moonsama-network'
               }
             ]
           },
