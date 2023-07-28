@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Delegated Proof of Stake
 ---
 
 # Parachain Staking Pallet
