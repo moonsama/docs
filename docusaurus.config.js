@@ -57,6 +57,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // algolia crawler
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
@@ -69,6 +70,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // SEO and link previews
+      metadata: [
+        {name: 'keywords', content: 'moonsama, docs, documentation, nft, gaming'},
+      ],
       // Replace with your project's social card
       navbar: {
         title: '',
@@ -129,8 +134,8 @@ const config = {
             title: 'Learn',
             items: [
               {
-                label: 'The Ecosystem',
-                to: '/docs/category/ecosystem'
+                label: 'The Products',
+                to: '/docs/category/products'
               },
               {
                 label: 'The Technology',
@@ -215,7 +220,7 @@ const config = {
         searchPagePath: 'search',
 
         //... other Algolia params
-      }
+      },
     }),
 };
 
