@@ -24,18 +24,17 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+Please make sure the build succeeds locally before pushing your modifications.
 
-Using SSH:
 
-```
-$ USE_SSH=true yarn deploy
-```
+### Contribute
 
-Not using SSH:
+We follow the well known [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+TL;DR:
+1. [Fork the repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+2. Create a branch for your modifications, branching off from `dev`
+3. Make your changes and push
+4. Open a pull request to the `dev` branch.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+For smaller things you can also edit documents in-place on GitHub.
