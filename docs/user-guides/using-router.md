@@ -36,12 +36,14 @@ For this guide we will be using Metamask
 
 ![img/ascreenshot.jpeg](img/router-tutorial-4.png)
 
-7. Metamask will request to set spending for the contract. Please set amount that equals or greater to the one you want to transfer.
+7. Metamask will request to set spending for the contract. Please set amount that equals or greater to the one you want
+to transfer.
 
 ![img/ascreenshot.jpeg](img/router-tutorial-51.png)
 
 :::note
-The operations for setting spending cap and signing require gas, that means you have to spend native token for chain that you making transfer FROM (Source Chain), for claiming tokens you will pay gas in DESTINATION chain.
+The operations for setting spending cap and signing require gas, that means you have to spend native token for chain 
+that you making transfer FROM (Source Chain), for claiming tokens you will pay gas in DESTINATION chain.
 :::
 
 
