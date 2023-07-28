@@ -1,0 +1,20 @@
+# Mint
+
+The Mint precompile allows a permitted account to mint new native tokens.
+
+## Address
+
+`0x0000000000000000000000000000000000000806`
+
+## Interface
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-only
+pragma solidity >=0.8.3;
+
+interface IMint {
+    event Mint(address indexed to, uint256 value);
+
+    function mint(address to, uint256 value) external;
+}
+```

@@ -25,7 +25,7 @@ core of this model are principles of decentralization, active engagement, and ba
 leverages the unique properties of Non-Fungible Tokens (NFTs) to encourage a greater sense of community and commitment 
 among its members.
 
-### Key Principles and Ideas
+## Key Principles and Ideas
 
 **NFT-Based Governance:** The foundation of Moonsama's governance model lies in the use of Non-Fungible Tokens (NFTs). 
 These unique digital assets provide holders with a stronger sense of community and engagement than traditional tokens, 
