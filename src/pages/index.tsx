@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Docs`}
-      description="Repository of information of all things Moonsama">
+      description="Repository of information for all things Moonsama">
       <HomepageHeader />
       <main>
       </main>

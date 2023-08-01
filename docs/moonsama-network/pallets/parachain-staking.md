@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+description: 🚧 This section in currently under construction 🚧 
 ---
 
-# Parachain Staking Pallet
+# Parachain Staking
 
 ## Introduction
 
@@ -10,19 +10,9 @@ Moonsama Network uses a Delegated Proof of Stake (DPoS) system that determines w
 blocks based on their total stake in the network. For general information on staking, such as general terminology, 
 staking variables, and more, please refer to the [Staking on Moonsama Network](/docs/about-sama/sama-staking) page.
 
-The DPoS system is powered by the 
-[parachain staking pallet](https://github.com/moonsama/moonsama-network/tree/main/pallets/parachain-staking/src), 
-allowing token holders (delegators) to express exactly which collator candidates they would like to support and with 
-what quantity of stake. The design of the parachain staking pallet is such that it enforces shared risk/reward on-chain 
-between delegators and candidates.
-
-Some of the functionality of the parachain staking pallet is also available through a staking precompile. The 
-precompile is a Solidity interface that enables you to perform staking actions through the Ethereum API. Please refer 
-to the [Staking Precompile](/docs/technology/solidity-precompiles/staking-precompile-сontract) guide for more 
-information.
-
-This guide will provide an overview of the extrinsics, storage methods, and getters for the pallet constants available 
-in the parachain staking pallet.
+The DPoS system is powered by the Parachain Staking Pallet, allowing token holders (delegators) to express exactly which
+collator candidates they would like to support and with what quantity of stake. The design of the parachain staking 
+pallet is such that it enforces shared risk/reward on-chain between delegators and candidates.
 
 ## Exit Delays
 
@@ -48,8 +38,9 @@ The parachain staking pallet provides the following extrinsics (functions):
 - **cancelLeaveCandidates**(candidateCount) - cancels a candidate's pending scheduled request to leave the candidate 
 pool given the current number of candidates in the pool.
 - **cancelLeaveDelegators**() - *deprecated as of runtime 1800* - cancels a pending scheduled request to leave the set 
-of delegators. Use the [batch utility](./batch-utility) with
-`cancelDelegationRequest` for all delegations instead.
+of delegators. Use the 
+[batch utility](https://docs.rs/pallet-utility/latest/pallet_utility/pallet/enum.Call.html#variant.batch) 
+with `cancelDelegationRequest` for all delegations instead.
 - **candidateBondMore**(more) - request to increase a candidate's self bond by a specified amount.
 - **delegate**(candidate, amount, candidateDelegationCount, delegationCount) - request to add a delegation to a 
 specific candidate for a given amount and sets the percentage of rewards to auto-compound automatically to `0`. If the 
@@ -69,7 +60,7 @@ delegator provided the address of the candidate.
 set of collator candidates
 - **executeLeaveDelegators**(delegator, delegationCount) - *deprecated as of runtime 1800* - executes a scheduled due 
 request to leave the set of delegators and revoke all delegations. Use the 
-[batch utility](./batch-utility) with 
+[batch utility](https://docs.rs/pallet-utility/latest/pallet_utility/pallet/enum.Call.html#variant.batch) with 
 `executeDelegationRequest` for all delegations instead
 - **goOffline**() - allows a collator candidate to temporarily leave the pool of candidates without unbonding
 - **goOnline**() - allows a collator candidate to rejoin the pool of candidates after previously calling `goOffline()`
@@ -86,7 +77,7 @@ candidate pool. There is an [exit delay](#exit-delays) that must be waited
 before you can execute the request via the `executeLeaveCandidates` extrinsic
 - **scheduleLeaveDelegators**() - *deprecated as of runtime 1800* - schedules a request to leave the set of delegators 
 and revoke all ongoing delegations. Use the 
-[batch utility](./batch-utility) with 
+[batch utility](https://docs.rs/pallet-utility/latest/pallet_utility/pallet/enum.Call.html#variant.batch) with 
 `scheduleRevokeDelegation` for all delegations instead
 - **scheduleRevokeDelegation**(collator) - schedules a request to revoke a delegation given the address of a candidate. 
 There is an [exit delay](#exit-delays) that must be waited before you can 

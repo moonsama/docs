@@ -22,7 +22,7 @@ variety of ways. There are many potential use cases for NFTs, ranging from art a
 real estate. However, despite their potential, many NFT projects struggle to build and deliver on their roadmap due to 
 challenges such as scalability and interoperability.
 
-This is where Moonsama comes in. Moonsama provides infrastructure solutions and services that allow builders to leapfrog over some 
-of the most critical building blocks and to focus on what makes their projects unique. By simplifying the process of 
-building and deploying NFT projects, Moonsama is helping to drive innovation in the NFT space and empower creators to 
-bring their visions to life.
+This is where Moonsama comes in. Moonsama provides infrastructure solutions and services that allow builders to leapfrog
+over some of the most critical building blocks and to focus on what makes their projects unique. By simplifying the
+process of building and deploying NFT projects, Moonsama is helping to drive innovation in the NFT space and empower
+creators to bring their visions to life.

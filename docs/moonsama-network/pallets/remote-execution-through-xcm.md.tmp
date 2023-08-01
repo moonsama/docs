@@ -14,7 +14,7 @@ This derivative account pays for transaction fees, and it is set as the dispatch
 weight and fee information for the XCM remote execution part of the XCM Transactor extrinsic. This is needed because 
 the XCM transaction fee is paid by the sovereign account. Therefore, XCM Transactor calculates what this fee is and 
 charges the sender of the XCM Transactor extrinsic the estimated amount in the corresponding 
-[XC-20 token](/docs/technology/interoperability/xc-20s-and-cross-chain-assets) to repay the sovereign account.
+[XC-20 token](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets) to repay the sovereign account.
     
 
 ## XCM Transactor Pallet Interface
@@ -45,13 +45,13 @@ execute a given call in the given destination. The remote call will be signed an
 destination parachain must derivate. For Moonsama Network-based networks, this account is the `blake2` hash of the 
 descended multilocation, truncated to the correct length. The XCM Transactor Pallet calculates the fees for the remote 
 execution and charges the sender of the extrinsic the estimated amount in the corresponding 
-[XC-20 token](/docs/technology/interoperability/xc-20s-and-cross-chain-assets) given by the asset ID.
+[XC-20 token](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets) given by the asset ID.
 - **transactThroughSovereign**(destination, feePayer, fee, call, originKind, weightInfo) — sends an XCM message with 
 instructions to remotely execute a given call in the given destination. The remote call will be signed by the origin 
 parachain sovereign account (who pays the fees), but the transaction is dispatched from a given origin. The XCM 
 Transactor Pallet calculates the fees for the remote execution and charges the given account the estimated amount in 
-the corresponding [XC-20 token](/docs/technology/interoperability/xc-20s-and-cross-chain-assets) given by the asset 
-multilocation.
+the corresponding [XC-20 token](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets) given by the 
+asset multilocation.
 
 Where the inputs that need to be provided can be defined as:
 
@@ -66,9 +66,9 @@ message you are sending. The two different ways to set the fee item are:
   - **AsCurrencyID** — is the ID of the currency being used to pay for the remote call execution. Different runtimes 
   have different ways of defining the IDs. In the case of Moonsama Network-based networks, `SelfReserve` refers to 
   the native token, `ForeignAsset` refers to the asset ID of an 
-  [external XC-20](builders/interoperability/xcm/xc20/overview#external-xc20s) (not to be confused with the XC-20 
-  address), and `Erc20` refers to the contract address of a 
-  [local XC-20](builders/interoperability/xcm/xc20/overview#local-xc20s).
+  [external XC-20](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets#what-are-external-xc-20s) (not 
+  to be confused with the XC-20 address), and `Erc20` refers to the contract address of a 
+  [local XC-20](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets#what-are-local-xc-20s).
   - **AsMultiLocation** — is the multilocation that represents the asset to be used for fee payment when executing 
   the XCM.
 - **innerCall** — encoded call data of the call that will be executed in the destination chain. This is wrapped with 
@@ -83,8 +83,9 @@ contains two fields:
   - **overallWeight** — the total weight the XCM Transactor extrinsic can use. This includes all the XCM instructions 
   plus the weight of the call itself (**transactRequiredWeightAtMost**).
 - **call** — similar to `innerCall`, but it is not wrapped with the `asDerivative` extrinsic
-- **feePayer** — the address that will pay for the remote XCM execution in the transact through sovereign extrinsic. The 
-fee is charged in the corresponding [XC-20 token](builders/interoperability/xcm/xc20/overview/).
+- **feePayer** — the address that will pay for the remote XCM execution in the transact through sovereign extrinsic. 
+The fee is charged in the corresponding 
+[XC-20 token](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets).
 - **originKind** — dispatcher of the remote call in the destination chain. There are 
 [four types of dispatchers](https://github.com/paritytech/polkadot/blob/0a34022e31c85001f871bb4067b7d5f5cab91207/xcm/src/v0/mod.rs#L60) 
 available.
@@ -120,7 +121,7 @@ You need to ensure that the call you are going to execute remotely is allowed in
 
 To be able to send the extrinsics in this section, you need to have:
 
-- An account in the origin chain with [funds](builders/get-started/networks/moonbase/#get-tokens)
+- An account in the origin chain with [funds](/docs/about-sama/buying-sama)
 - Funds in the multilocation-derivative account on the target chain. You can calculate this address by using the 
 [`calculate-multilocation-derivative-account.ts` script](https://github.com/PureStake/xcm-tools/blob/main/scripts/calculate-multilocation-derivative-account.ts)
 
@@ -262,7 +263,7 @@ transactThroughSigned();
 
 ```
 
-> **FIXME**
+> **FIXME: calldata incorrect**
 
 You can view an example of the above script, which sends 1 xcUNIT to Alice's account on the relay chain, on 
 [Polkadot.js.org](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.moonsama.com%2Fws#/extrinsics/decode/0x210603010100e10d00017576e5e612ff054915d426c546b1b21a010000c52ebca2b10000000000000000007c030044236223ab4291b93eed10e4b511b37a398dee5513000064a7b3b6e00d02286bee0001030094357700) 
@@ -274,7 +275,7 @@ Once the transaction is processed, Alice should've received one token in her add
 
 The XCM Transactor Precompile contract allows developers to access the XCM Transactor Pallet features through the 
 Ethereum API of Moonsama Network-based networks. Similar to other 
-[precompile contracts](/docs/technology/solidity-precompiles/), the XCM Transactor Precompile is located at the 
+[precompile contracts](/docs/category/solidity-precompiles/), the XCM Transactor Precompile is located at the 
 following addresses:
 
 The XCM Transactor Legacy Precompile is still available on all Moonsama Network-based networks. However, **the legacy 
@@ -309,9 +310,9 @@ fee payment instead of the XC-20 token `address`.
 *uint64* transactRequiredWeightAtMost, *bytes* *memory* call, *uint256* feeAmount, *uint64* overallWeight) — function 
 that represents the `transactThroughSigned` method described in the 
 [previous example](#xcm-transactor-transact-through-signed), setting the 
-**fee** type to **AsCurrencyId**. Instead of the asset ID, you'll need to provide the <!-- FIXME: broken link -->
-[asset XC-20 address](/docs/technology/interoperability/xcm/xc20/overview/#current-xc20-assets) of the token that is 
-used for fee payment.
+**fee** type to **AsCurrencyId**. Instead of the asset ID, you'll need to provide the
+[asset XC-20 address](/docs/moonsama-network/interoperability/xc-20s-and-cross-chain-assets#current-list-of-external-xc-20s) 
+of the token that is used for fee payment.
 - **encodeUtilityAsDerivative**(*uint8* transactor, *uint16* index, *bytes memory* innerCall) - encodes an 
 `asDerivative` wrapped call given the transactor to be used, the index of the derivative account, and the inner call 
 to be executed from the derivated address.

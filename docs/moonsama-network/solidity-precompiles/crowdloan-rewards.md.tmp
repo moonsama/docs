@@ -1,0 +1,25 @@
+---
+description: Claim rewards with relay chain account
+---
+
+# Crowdloan Rewards
+
+The Crowdloan Rewards precompile allows users who participated in the Moonsama Network crowdloan to associate a
+relay chain account with their Moonsama Network account, in order to claim rewards.
+
+## Address
+
+`0x0000000000000000000000000000000000000804`
+
+## Interface
+
+```solidity
+pragma solidity >=0.8.3;
+
+interface CrowdloanRewards {
+    function isContributor(address contributor) external view returns (bool);
+    function rewardInfo(address contributor) external view returns (uint256, uint256);
+    function claim() external;
+    function updateRewardAddress(address newAddress) external;
+}
+```
