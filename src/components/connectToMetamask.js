@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 const supportedNetworks = {
   moonsama: {
@@ -26,29 +27,31 @@ const supportedNetworks = {
 };
 
 export default function ConnectToMetamask({ chain }) {
-  const provider = window.ethereum
   const [network] = useState(supportedNetworks[chain])
   const [isConnected, setIsConnected] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
   
   useEffect(async () => {
+    const provider = window.ethereum
     if (provider) {
       const chainId = await provider.request({ method: 'eth_chainId' })
       setIsConnected(chainId === network.chainId)
     } else {
       setErrorMsg('Metamask not found. Please install the extension first.')
     }
-  }, [provider, network])
+  }, [network])
 
   useEffect(() => {
+  const provider = window.ethereum
     if (provider) {
       provider.on('chainChanged', () => {
         window.location.reload()
       })
     }
-  }, [provider])
+  }, [])
 
   const connect = useCallback(async () => {
+    const provider = window.ethereum
     if (provider) {
       try {
         await provider.request({
@@ -65,7 +68,7 @@ export default function ConnectToMetamask({ chain }) {
         }
       }
     }    
-  }, [provider, network, setIsConnected, setErrorMsg])
+  }, [network])
 
   if (!network) {
     return <span />
