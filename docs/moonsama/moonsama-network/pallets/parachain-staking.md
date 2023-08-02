@@ -8,7 +8,7 @@ description: 🚧 This section in currently under construction 🚧
 
 Moonsama Network uses a Delegated Proof of Stake (DPoS) system that determines which collators are eligible to produce 
 blocks based on their total stake in the network. For general information on staking, such as general terminology, 
-staking variables, and more, please refer to the [Staking on Moonsama Network](/docs/about-sama/sama-staking) page.
+staking variables, and more, please refer to the [Staking on Moonsama Network](/docs/moonsama/about-sama/sama-staking) page.
 
 The DPoS system is powered by the Parachain Staking Pallet, allowing token holders (delegators) to express exactly which
 collator candidates they would like to support and with what quantity of stake. The design of the parachain staking 

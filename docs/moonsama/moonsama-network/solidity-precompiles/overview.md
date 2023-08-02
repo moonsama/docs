@@ -60,12 +60,12 @@ Usage information can be found at [Ethereum Precompiles](./ethereum).
 
 | Contract | Address |
 | --- | --- |
-| [SAMA ERC-20](/docs/moonsama-network/solidity-precompiles/sama-erc20) | `0x0000000000000000000000000000000000000800` |
-| [X-Tokens](/docs/moonsama-network/solidity-precompiles/x-tokens) | `0x0000000000000000000000000000000000000801` |
-| [Call Permit](/docs/moonsama-network/solidity-precompiles/call-permit) | `0x0000000000000000000000000000000000000802` |
-| [Randomness](/docs/moonsama-network/solidity-precompiles/randomness) | `0x0000000000000000000000000000000000000803` |
+| [SAMA ERC-20](/docs/moonsama/moonsama-network/solidity-precompiles/sama-erc20) | `0x0000000000000000000000000000000000000800` |
+| [X-Tokens](/docs/moonsama/moonsama-network/solidity-precompiles/x-tokens) | `0x0000000000000000000000000000000000000801` |
+| [Call Permit](/docs/moonsama/moonsama-network/solidity-precompiles/call-permit) | `0x0000000000000000000000000000000000000802` |
+| [Randomness](/docs/moonsama/moonsama-network/solidity-precompiles/randomness) | `0x0000000000000000000000000000000000000803` |
 | Crowdloan Rewards | `0x0000000000000000000000000000000000000804` |
-| [Batch](/docs/moonsama-network/solidity-precompiles/batch) | `0x0000000000000000000000000000000000000805` |
+| [Batch](/docs/moonsama/moonsama-network/solidity-precompiles/batch) | `0x0000000000000000000000000000000000000805` |
 | Mint | `0x0000000000000000000000000000000000000806` |
 
 
@@ -79,9 +79,9 @@ prefix pertaining to their type and are suffixed with a unique identifer.
 | --- | --- |
 | Foreign Asset | `0xffffffff` |
 | Local Asset | `0xfffffffe` |
-| [Multi-token Collection](/docs/moonsama-network/solidity-precompiles/multi-token) | `0xfffffffa` |
+| [Multi-token Collection](/docs/moonsama/moonsama-network/solidity-precompiles/multi-token) | `0xfffffffa` |
 
-For example, when a new collection is created in the [Multi-Token pallet](/docs/moonsama-network/pallets/multi-token),
+For example, when a new collection is created in the [Multi-Token pallet](/docs/moonsama/moonsama-network/pallets/multi-token),
 it will get assigned a unique identifier (incrementing starting from 1). To derive the collection precompile address,
 we take the appropriate prefix (`0xfffffffa`) and add the collection ID in hex-encoded, big endian format.
 

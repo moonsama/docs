@@ -84,9 +84,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            sidebarId: 'moonsama',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'community',
+            position: 'left',
+            label: 'Community',
           },
           {
             href: 'https://medium.com/@MoonsamaNFT',

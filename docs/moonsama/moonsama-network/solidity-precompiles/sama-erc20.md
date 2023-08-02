@@ -4,7 +4,7 @@ description: Interact with SAMA
 
 # SAMA ERC-20
 
-This precompile allows developers to interact with the [SAMA Token](/docs/about-sama) through an ERC0-20
+This precompile allows developers to interact with the [SAMA Token](/docs/moonsama/about-sama) through an ERC0-20
 interface. The precompile directly interfaces with the 
 [Balances pallet](https://paritytech.github.io/substrate/master/pallet_balances/index.html) to read from and write to 
 Moonsama Network's native SAMA implementation.

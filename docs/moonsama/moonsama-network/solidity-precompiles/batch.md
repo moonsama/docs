@@ -12,7 +12,7 @@ precompile, developers can enhance user experience with batched transactions as 
 a user is required to confirm to one. Additionally, gas fees can be reduced since batching avoids multiple base gas fees
 (the initial 21000 units of gas spent to begin a transaction).
 
-The precompile interacts directly with [Substrate's EVM pallet](/docs/moonsama-network/pallets/evm). The caller
+The precompile interacts directly with [Substrate's EVM pallet](/docs/moonsama/moonsama-network/pallets/evm). The caller
 of the batch function will have their address act as the `msg.sender` for all subtransactions, but unlike [delegate
 calls](https://docs.soliditylang.org/en/v0.8.15/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries),
 the target contract will still affect its own storage. It is effectively the same as if the user signed multiple

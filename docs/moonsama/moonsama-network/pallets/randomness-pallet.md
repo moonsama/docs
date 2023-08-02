@@ -17,7 +17,7 @@ The randomness pallet enables you to check on randomness requests that have not 
 results, and more. To actually request and fulfill randomness, you can use the randomness precompile and randomness 
 consumer contracts. The precompile is a Solidity interface that enables you to request randomness, check on the 
 status of requests, fulfill requests, and more through the Ethereum API. For more information on how to use both of 
-these contracts, please refer to the [Randomness Precompile](/docs/moonsama-network/solidity-precompiles/randomness) 
+these contracts, please refer to the [Randomness Precompile](/docs/moonsama/moonsama-network/solidity-precompiles/randomness) 
 guide.
 
 This page will provide an overview of the storage methods and getters for the pallet constants available in the 

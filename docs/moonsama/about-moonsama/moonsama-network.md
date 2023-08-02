@@ -16,7 +16,7 @@ Moonsama Network is fully EVM compatible. You can find connection and RPC info
 [here](https://chainlist.org/?search=2199) 
 and browse EVM transactions in the [EVM explorer of Moonsama Network](https://explorer.moonsama.com).
 
-For more properties of the network, see [About Moonsama Network](/docs/moonsama-network/About) 
+For more properties of the network, see [About Moonsama Network](/docs/moonsama/moonsama-network/About) 
 and for a deeper dive into the on-chain runtime, [check out the technical documentation](/docs/category/moonsama-network/).
 
 ![moonsama-network](img/moonsama-network.png)

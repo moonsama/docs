@@ -40,7 +40,7 @@ interface ICollectionFactory {
 
 :::note
 A collection creator will need to have been granted the `Creator` role in the 
-[Roles Management Pallet](/docs/moonsama-network/pallets/roles-management).
+[Roles Management Pallet](/docs/moonsama/moonsama-network/pallets/roles-management).
 :::
 
 ### Collections
