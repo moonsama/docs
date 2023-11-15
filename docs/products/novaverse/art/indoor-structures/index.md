@@ -20,6 +20,12 @@ part of the apartment and commercial space architecture.
 *Structural elements may only have transparent areas which are self containing, meaning they do not require transparency
 on adjacent unrelated elements or enforce matching adjacent elements that complement the transparent areas.
 
+## Coordinate System
+
+|                                                                      |                                                     |
+|:---------------------------------------------------------------------|-----------------------------------------------------|
+| The coordinate system is left-handed with the Y-axis facing upwards. | ![Coordinate System](img/explainer-coordinates.jpg) |
+
 ## Asset Categorization
 
 | Category | Summary                                                             |                                                |
@@ -33,23 +39,35 @@ on adjacent unrelated elements or enforce matching adjacent elements that comple
 Floor tiles are simple square meshes that fill the entire bottom side of the cube they occupy. They must only contain
 upwards facing parts and must be infinitely tileable.
 
-|                             |                                                               |
-|-----------------------------|---------------------------------------------------------------|
-| Fill the entire square      | ![Fill Square](img/explainer-shape-ground-bounds.jpg)         |
-| Do not add any obstructions | ![No Obstructions](img/explainer-shape-ground-no-objects.jpg) |
+|                                          |                                                               |
+|------------------------------------------|---------------------------------------------------------------|
+| Fill the entire square                   | ![Fill Square](img/explainer-shape-ground-bounds.jpg)         |
+| The origin point is at the minimum point | ![Floor Origin](img/explainer-origin-ground.jpg)              |
+| Do not add any obstructions              | ![No Obstructions](img/explainer-shape-ground-no-objects.jpg) |
 
 ## Wall Tiles
 
 Wall tiles can be any shape, but they have to fill one entire side of the cube they occupy. They must be horizontally
 and vertically tileable.
 
+### Wall Origin Point
+
+|                                                                                                                              |                                                                       |
+|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| The origin point is at the lower left point when facing the wall. Only provide walls in their default (0, 0, 0) orientation. | ![Wall Origin](img/explainer-origin-wall.jpg)                         |
+| Example 90 degrees rotated                                                                                                   | ![Wall Origin Rotated 90](img/explainer-origin-wall-rotated-90.jpg)   |
+| Example 180 degrees rotate                                                                                                   | ![Wall Origin Rotated 180](img/explainer-origin-wall-rotated-180.jpg) |
+| Example 270 degrees rotated                                                                                                  | ![Wall Origin Rotated 270](img/explainer-origin-wall-rotated-270.jpg) |
+| The origin point stays in place regardless of which part of the wall it is                                                   | ![Floor Origin](img/explainer-origin-window.jpg)                      |
+| Example window half right                                                                                                    | ![Floor Origin](img/explainer-origin-window-2.jpg)                    |
+
 ### Solid Wall Tiles
 
-|                                                                              |                                                              |
-|------------------------------------------------------------------------------|--------------------------------------------------------------|
-| Example                                                                      | ![Example Solid Wall](img/explainer-example-wall.jpg)        |
-| Fill the entire square                                                       | ![Fill Square](img/explainer-shape-wall-bounds.jpg)          |
-| Do not add any cutouts at intersection points where other walls will connect | ![No Cutouts](img/explainer-shape-wall-solid-no-cutouts.jpg) |
+|                                                                                                                              |                                                              |
+|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| Example                                                                                                                      | ![Example Solid Wall](img/explainer-example-wall.jpg)        |
+| Fill the entire square                                                                                                       | ![Fill Square](img/explainer-shape-wall-bounds.jpg)          |
+| Do not add any cutouts at intersection points where other walls will connect                                                 | ![No Cutouts](img/explainer-shape-wall-solid-no-cutouts.jpg) |
 
 ### Connected Wall Tiles
 
@@ -94,11 +112,19 @@ look of your designs. When designing these meshes, take these properties into co
     - Inner corner
     - Outer corner
 
-|                  |                                                             |
-|------------------|-------------------------------------------------------------|
-| Example Inner    | ![Inner Trims](img/explainer-example-trims-inner.jpg)       |
-| Example Straight | ![Straight Trims](img/explainer-example-trims-straight.jpg) |
-| Example Outer    | ![Outer Trims](img/explainer-example-trims-outer.jpg)       |
+|                                                                 |                                                             |
+|-----------------------------------------------------------------|-------------------------------------------------------------|
+| Example Inner                                                   | ![Inner Trims](img/explainer-example-trims-inner.jpg)       |
+| Example Straight                                                | ![Straight Trims](img/explainer-example-trims-straight.jpg) |
+| Example Outer                                                   | ![Outer Trims](img/explainer-example-trims-outer.jpg)       |
+
+### Trim Origin Point
+
+|                                                                 |                                                       |
+|-----------------------------------------------------------------|-------------------------------------------------------|
+| The trim origin follows the wall origin the trim is attached to | ![Outer Trims](img/explainer-origin-trim.jpg)         |
+| This also applies to right halves                               | ![Outer Trims](img/explainer-origin-trim-outer.jpg)   |
+| Outer corners belong to the wall that specifies the corner type | ![Outer Trims](img/explainer-origin-corner-outer.jpg) |
 
 ### Corners
 
