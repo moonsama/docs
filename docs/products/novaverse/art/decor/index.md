@@ -14,8 +14,17 @@ building parts.
 | Texture Format         | `png`, `jpg`, `tga`, `tif` |
 | Skinning supported     | yes                        |
 | Transparency supported | avoid                      |
-| Reflections supported  | TBA                        |
+| Reflections supported  | minimal                    |
 | LOD supported          | TBA                        |
+
+## Texture Maps
+
+| Type                    | Notes                                                                                                                                                                                                                                                                               |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Albedo                  | RGB(A) texture                                                                                                                                                                                                                                                                      |
+| Metallic Smoothness     | Grayscale texture with an alpha channel, where the grayscale part represents the metalness and the alpha channel represents smoothness. Black means no metallic, white means full metallic, completely transparent means full roughness, completely opaque means full reflectivity. |
+| Normal Map              | RGB texture                                                                                                                                                                                                                                                                         |
+| Emission Map (Optional) | RGB texture                                                                                                                                                                                                                                                                         |
 
 ## Placement Rules
 
