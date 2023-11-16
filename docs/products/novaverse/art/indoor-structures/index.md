@@ -209,9 +209,17 @@ Users can apply different designs on each side of a wall.
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | Every color change in the picture represents a different, unique wall design plus corresponding trims & corners. | ![Mixed Walls](img/explainer-shape-walls-mixed.jpg) |
 
-### Decorations
+### Furniture
 
-Wall mounted decorations like posters, picture frames, monitors & shelfs each specify attachment points where they are
+Furniture is placed on a 10cm grid. However, wall meshes do not have to conform to this grid, as furniture will perform
+an additional collision check when placing to prevent intersections with walls and other furniture.
+
+Additionally, trying to take the 10cm grid into account provides no benefits, as furniture itself may have all kinds of
+shapes within the space they occupy, so seamless alignment with walls is difficult anyway.
+
+### Wall Mounted Decorations
+
+Wall mounted decorations like posters, picture frames, monitors & shelves each specify attachment points where they are
 mounted to a wall. They can only be placed if their placement volume starting at the attachment point is unobstructed.
 
 When designing walls, take the placement of decorations into consideration by incorporating surfaces that offer
