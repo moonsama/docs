@@ -30,5 +30,5 @@ proposal](https://mcapi.moonsama.com/townhall/vote/cd83137d-0b78-4732-889b-07657
 
 Moonsama Network is a parachain and has successfully 
 [acquired a parachain slot #42](https://parachains.info/details/moonsama). 
-Contributors of the auction received SAMA rewards, which details can be found 
-[here](https://medium.com/@MoonsamaNFT/polkadot-crowdloan-for-moonsama-network-is-now-live-ddd61b4be0ff).
+Contributors of the auction received SAMA rewards; you can find the crowdloan details 
+[here](https://medium.com/@MoonsamaNFT/polkadot-crowdloan-for-moonsama-network-is-now-live-ddd61b4be0ff) and instructions on how to claim the crowdloan rewards [here](https://medium.com/@MoonsamaNFT/moonsamas-crowdloan-rewards-are-out-ef9d48e1ce08)
