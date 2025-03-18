@@ -35,6 +35,21 @@ const config = {
     },
   },
 
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-client-redirects',
+  //     {
+  //       redirects: [
+  //         {
+  //           from: '/',
+  //           to: '/docs/category/about-moonsama',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  //   // ... any other existing plugins
+  // ],
+
   presets: [
     [
       'classic',
@@ -139,12 +154,8 @@ const config = {
             title: 'Learn',
             items: [
               {
-                label: 'The Products',
-                to: '/docs/category/products'
-              },
-              {
                 label: 'The Technology',
-                to: '/docs/category/moonsama-network'
+                to: '/docs/about-moonsama/moonsama-tech'
               }
             ]
           },
