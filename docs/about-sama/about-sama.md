@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # About SAMA
 
-**$SAMA** is the native token of Moonsama Network and Exosama Network, the two blockchains of Moonsama. It is a vital
+**$SAMA** is the native token of Exosama Network. It is a vital
 component of the network's ecosystem, as it is used to facilitate transactions, incentivize users to participate in the
 network, and maintain the security and stability of the network. 
 

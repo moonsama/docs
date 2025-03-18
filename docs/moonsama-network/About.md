@@ -3,10 +3,11 @@ sidebar_position: 1
 description: Overview of the network
 ---
 
-# About
+:::warning 
+The development of Moonsama Network was discontinued. The documentation of the chain however is preserved to keep track of history. Please note that this information is not relevant any more. Contributors of the [crowdloan](https://parachains.info/details/moonsama) can connect their EVM addresses and receive their rewards on [https://crowdloan.moonsama.com/](https://crowdloan.moonsama.com/).
+:::
 
-Moonsama Network is an [EVM-compatible](./evm-compatibility) Polkadot parachain, the new home of the Moonsama ecosystem 
-and the underying trust layer of Moonsama products.
+Moonsama Network is an [EVM-compatible](./evm-compatibility) Polkadot parachain.
 
 ## Key Information
 

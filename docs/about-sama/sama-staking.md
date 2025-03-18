@@ -1,13 +1,8 @@
 ---
 sidebar_position: 3
 ---
+# Staking
 
-# SAMA Staking 🥩
+Currently no SAMA staking is possible.
 
-🚧 This section in currently under construction 🚧 
-
-Working hard to deliver! 🏗️👷‍♂️
-
-[However, check out the staking proposal by our CTO.](https://moonsama.notion.site/moonsama/Kyilkhor-s-staking-proposal-26307b7d957948c783cb7c083962122b)
-
-Stay tuned for updates of the 2nd iteration of this proposal.
+However, estabilished Clans can launch staking campaigns that include SAMA on the [Multiverse Portal](https://portal.moonsama.com/staking).
