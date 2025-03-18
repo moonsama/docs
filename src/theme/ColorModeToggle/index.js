@@ -5,7 +5,6 @@ export default function ColorModeToggleWrapper(props) {
   return (
     <>
       <ColorModeToggle {...props} />
-
     </>
   ); 
 }

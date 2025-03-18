@@ -2,12 +2,16 @@
 sidebar_position: 2
 ---
 
-# How can I buy SAMA?
+# How can I get SAMA?
 
-Currently, there are three options for purchasing SAMA tokens.
+## Exchanges
 
-1. [MEXC, a centralized exchange](https://www.mexc.com/exchange/SAMA_USDT)
+You can keep track of exchanges trading SAMA on [Coingecko](https://www.coingecko.com/en/coins/moonsama) and [CoinMarketCap](https://coinmarketcap.com/currencies/exosama-network).
 
-2. [Uniswap V3, a decentralized exchange](https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xe04f47ff45576249bc5083dfdf987e03d0550113)
+## Participate!
 
-3. [Beam Swap, a decentralized exchange](https://swap.onbeam.com/#/swap?inputCurrency=0xd51bfa777609213a653a2cd067c9a0132a2d316a&outputCurrency=0x0650c20D8B536dA43818578071d43CDdd8fFE854)
+You can earn some SAMA as reward for playing Carnage which takes place in Dremica.
+
+## Faucet
+
+Every Moonsama Account can claim 0.05 SAMA one time from the [Moonsama Faucet](https://portal.moonsama.com/faucet).

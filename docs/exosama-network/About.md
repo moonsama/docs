@@ -1,11 +1,5 @@
-# About
+# About EXN
 
-Exosama network is the first EVM chain of Moonsama.
+Exosama network is the production EVM chain of Moonsama.
 
-- RPC and connectivity info: <https://chainlist.org/chain/2109>
-- Native token: $SAMA
-- Blocktime: 5s
-- Explorer: <https://explorer.exosama.com/>
-- Faucet: <https://multiverse.moonsama.com/faucet>
-
-Exosama will live on as the test network of the production Moonsama Network.
+Exosama Network is optimized to be a cost-effective and high-performance EVM chain that hosts some of the key Moonsama products. As a multi-chain ecosystem, we maintain independence from any single blockchain. Given our extensive portfolio of on-chain assets and applications, establishing our own base trust layer was essential to eliminate dependencies on third-party protocol developers and external tokens for gas fee payments.

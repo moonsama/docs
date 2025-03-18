@@ -13,32 +13,34 @@
 }
 
 :root {
-  --ifm-color-primary: #0BBB85;
-  --ifm-color-primary-dark: #0aa878;
-  --ifm-color-primary-darker: #099f71;
-  --ifm-color-primary-darkest: #08835d;
-  --ifm-color-primary-light: #0cce92;
-  --ifm-color-primary-lighter: #0dd799;
-  --ifm-color-primary-lightest: #10f1ac;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  background-color: rgba(247, 250, 252, 1);
-  --ifm-font-family-base: "Rubik";
-  
+   /* Primary color - using the purple from your theme */
+   --ifm-color-primary: #5E00E6;
+   --ifm-color-primary-dark: #4900B4;
+   --ifm-color-primary-darker: #340082;
+   --ifm-color-primary-darkest: #1F0050;
+   --ifm-color-primary-light: #781AFF;
+   --ifm-color-primary-lighter: #964DFF;
+   --ifm-color-primary-lightest: #B47FFF;
+   
+   --ifm-code-font-size: 95%;
+   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+   background-color: #F7FAFC; /* gray-50 from your theme */
+   --ifm-font-family-base: "Rubik";
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3BEFB8;
-  --ifm-color-primary-dark: #0aa878;
-  --ifm-color-primary-darker: #099f71;
-  --ifm-color-primary-darkest: #08835d;
-  --ifm-color-primary-light: #0cce92;
-  --ifm-color-primary-lighter: #0dd799;
-  --ifm-color-primary-lightest: #10f1ac;
+  /* Using lighter shade of primary for dark mode */
+  --ifm-color-primary: #B47FFF;
+  --ifm-color-primary-dark: #964DFF;
+  --ifm-color-primary-darker: #781AFF;
+  --ifm-color-primary-darkest: #5E00E6;
+  --ifm-color-primary-light: #D3B2FF;
+  --ifm-color-primary-lighter: #F2E3FF;
+  --ifm-color-primary-lightest: #F2E3FF;
+  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  background-color: rgba(23, 25, 35, 1);
-   
+  background-color: #1A202C; /* gray-800 from your theme */
 }
 
 
@@ -101,8 +103,8 @@
 }
 
 .button{
-  background: rgba(11, 187, 133, 1);
-  border: 1px solid #0BBB85;
+  background: #5E00E6; /* primary-500 */
+  border: 1px solid #5E00E6;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -111,8 +113,8 @@
   color: #FFFFFF;
 }
 .button:hover {
-  border: 1px solid #0BBB85;
-  background: rgba(11, 187, 133, 0.8);
+  border: 1px solid #4900B4; /* primary-600 */
+  background: #4900B4;
 }
 
  .navbar__logo {
@@ -165,7 +167,7 @@
 }
 
 [data-theme='dark'] .pagination-nav__link:hover {
-  border-left: 1px solid #0BBB85;
+  border-left: 1px solid #B47FFF;
 }
 
 [data-theme='dark'] .card {
@@ -173,7 +175,7 @@
 }
 
 [data-theme='dark'] .card:hover {
-  border-left: 1px solid #0BBB85;
+  border-left: 1px solid #B47FFF;
 }
 
 .error-msg {
