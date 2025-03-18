@@ -101,8 +101,8 @@
 }
 
 .button{
-  background: rgba(11, 187, 133, 1);
-  border: 1px solid #0BBB85;
+  background: rgb(94, 0, 230);
+  border: 1px solid rgb(94, 0, 230);;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -111,8 +111,8 @@
   color: #FFFFFF;
 }
 .button:hover {
-  border: 1px solid #0BBB85;
-  background: rgba(11, 187, 133, 0.8);
+  border: 1px solid rgb(72, 14, 193);
+  background: rgb(72, 14, 193);
 }
 
  .navbar__logo {

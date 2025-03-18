@@ -70,6 +70,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // SEO and link previews
       metadata: [
         {name: 'keywords', content: 'moonsama, docs, documentation, nft, gaming'},
@@ -94,8 +99,8 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://twitter.com/MoonsamaNFT',
-            label: 'Twitter',
+            href: 'https://x.com/MoonsamaNFT',
+            label: 'X',
             position: 'left',
           },
           {
@@ -160,8 +165,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                href: 'https://twitter.com/MoonsamaNFT',
-                label: 'Twitter',
+                href: 'https://x.com/MoonsamaNFT',
+                label: 'X',
               },
               {
                 href: 'https://discord.gg/moonsama',

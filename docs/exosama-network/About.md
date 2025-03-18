@@ -1,4 +1,4 @@
-# About
+# About EXN
 
 Exosama network is the production EVM chain of Moonsama.
 
